@@ -1,0 +1,26 @@
+window_sizes 1200 896 300 900 682 82
+diagrams
+  classdiagram_ref 128973 // Competición
+    711 592 100 4 0 0
+  usecasediagram_ref 128077 // Competiciones
+    711 592 100 4 0 0
+  usecasediagram_ref 128205 // Eventos
+    711 592 100 4 0 0
+  usecasediagram_ref 128333 // Transporte
+    711 592 100 4 0 0
+  usecasediagram_ref 128461 // Alojamiento
+    711 592 100 4 0 0
+  usecasediagram_ref 128589 // Federación
+    711 592 100 4 0 0
+  usecasediagram_ref 128717 // Personal
+    711 592 100 4 0 0
+  active  usecasediagram_ref 128845 // Publicidad
+    890 740 100 4 0 0
+end
+show_stereotypes
+selected usecasediagram_ref 128845 // Publicidad
+open
+  usecaseview_ref 128077 // Casos de uso
+  classview_ref 128205 // Diagrama de clases
+end
+end

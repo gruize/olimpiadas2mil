@@ -1,0 +1,66 @@
+format 70
+
+usecasecanvas 128077 usecase_ref 129357 // Crear evento
+  xyzwh 295 123 3005 64 32 label_xy 362 132
+end
+usecasecanvas 128205 usecase_ref 129485 // Modificar evento
+  xyzwh 298 162 3005 64 32 label_xy 363 174
+end
+usecasecanvas 128333 usecase_ref 129613 // Eliminar evento
+  xyzwh 299 205 3005 64 32 label_xy 366 212
+end
+usecasecanvas 128379 usecase_ref 128507 // Solicitar Personal
+  xyzwh 55 22 3005 64 32 label_xy 45 8
+end
+usecasecanvas 128635 usecase_ref 129659 // Consulta de eventos Deportivos
+  xyzwh 324 372 3005 64 32 label_xy 399 385
+end
+classcanvas 129229 class_ref 128333 // Gestor_event
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 50 147 2000
+end
+subject 130043 ""
+  xyzwh 267 111 3000 308 133
+note 130299 "El evento lleva implicito un alojamiento, un horario, arbitro y participantes"
+  xyzwh 587 117 2000 115 121
+classcanvas 130637 class_ref 128461 // Usuario_federacion
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 49 444 2000
+end
+classcanvas 130765 class_ref 128205 // Ciudadano
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 60 225 2000
+end
+classcanvas 131277 class_ref 128717 // Gestor_alojamiento
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 47 367 2005
+end
+classcanvas 131533 class_ref 128589 // Gestor_transporte
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 46 294 2010
+end
+classcanvas 131789 class_ref 128845 // Gestor_personal
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 56 524 2000
+end
+line 128507 ----
+  from ref 129229 z 3006 to ref 128379
+line 128763 ----
+  from ref 130765 z 3006 to ref 128635
+line 129147 ----
+  from ref 131533 z 3006 to ref 128635
+line 129275 ----
+  from ref 131277 z 3006 to ref 128635
+line 129357 ----
+  from ref 128077 z 3006 to ref 129229
+line 129403 ----
+  from ref 130637 z 3006 to ref 128635
+line 129485 ----
+  from ref 129229 z 3006 to ref 128205
+line 129613 ----
+  from ref 129229 z 3006 to ref 128333
+line 129659 ----
+  from ref 131789 z 3006 to ref 128635
+line 129787 ----
+  from ref 129229 z 3006 to ref 128635
+end

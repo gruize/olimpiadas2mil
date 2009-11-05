@@ -1,0 +1,8 @@
+window_sizes 1024 712 256 762 512 82
+show_stereotypes
+selected usecasediagram_ref 128205 // Eventos
+open
+  usecaseview_ref 128077 // Casos de uso
+  class_ref 128379 // Alojamiento
+end
+end
