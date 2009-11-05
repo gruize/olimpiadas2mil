@@ -1,0 +1,46 @@
+format 70
+
+usecasecanvas 128123 usecase_ref 129275 // Consulta de personal
+  xyzwh 400 341 3005 64 32 label_xy 381 373
+end
+usecasecanvas 128205 usecase_ref 132301 // Dar de alta un trabajador
+  xyzwh 407 25 3005 64 32 label_xy 474 38
+end
+usecasecanvas 128333 usecase_ref 132429 // Modificar un trabajador
+  xyzwh 408 62 3005 64 32 label_xy 478 71
+end
+usecasecanvas 128379 usecase_ref 129915 // Modificar la asigncaion de un trabajador
+  xyzwh 397 231 3005 64 32 label_xy 463 243
+end
+usecasecanvas 128461 usecase_ref 132557 // Dar de baja un trabajador
+  xyzwh 412 102 3005 64 32 label_xy 477 113
+end
+usecasecanvas 128507 usecase_ref 130043 // Eliminar asignacion de un trabajador
+  xyzwh 399 270 3005 64 32 label_xy 467 283
+end
+usecasecanvas 128589 usecase_ref 132685 // Asignar trabajador
+  xyzwh 396 192 3005 64 32 label_xy 463 202
+end
+subject 129403 ""
+  xyzwh 388 15 3000 248 132
+subject 129531 ""
+  xyzwh 389 174 3000 282 142
+classcanvas 129659 class_ref 128845 // Gestor_personal
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 99 142 2000
+end
+line 129787 ----
+  from ref 129659 z 3006 to ref 128205
+line 129915 ----
+  from ref 129659 z 3006 to ref 128333
+line 130043 ----
+  from ref 129659 z 3006 to ref 128461
+line 130171 ----
+  from ref 129659 z 3006 to ref 128589
+line 130299 ----
+  from ref 129659 z 3006 to ref 128379
+line 130427 ----
+  from ref 129659 z 3006 to ref 128507
+line 130555 ----
+  from ref 129659 z 3006 to ref 128123
+end

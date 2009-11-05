@@ -1,0 +1,24 @@
+format 70
+
+classcanvas 129485 class_ref 128077 // Gestor_deporte
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 243 139 2000
+end
+usecasecanvas 130043 usecase_ref 129403 // Consulta de Deportes
+  xyzwh 330 256 3005 64 32 label_xy 310 288
+end
+classcanvas 130893 class_ref 128205 // Ciudadano
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 468 274 2000
+end
+classcanvas 131149 class_ref 128333 // Gestor_event
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 454 187 2000
+end
+line 130171 ----
+  from ref 129485 z 3006 to ref 130043
+line 130299 ----
+  from ref 130043 z 3006 to ref 131149
+line 130427 ----
+  from ref 130043 z 3006 to ref 130893
+end
