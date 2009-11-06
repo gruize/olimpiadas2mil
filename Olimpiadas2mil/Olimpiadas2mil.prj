@@ -1,7 +1,7 @@
 format 70
 "Olimpiadas2mil"
-  revision 5
-  modified_by 44 "hlocal"
+  revision 6
+  modified_by 12 "hlocal"
 
 
   
@@ -38,7 +38,7 @@ format 70
   
   java_dir "C:/Users/Alicia/Universidad/IS/2009-2010/BOUML/Olimpiadas2mil/"
   ncouples 1
-  key "html dir" value "c:/hlocal/"
+  key "html dir" value "z:/2009-2010/IS/Olimpiadas2mil/Documentation/"
   usecaseview 128077 "Casos de uso"
     //use case diagram settings
     package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
@@ -1250,7 +1250,6 @@ ${members}}
       classrelation 141179 // <association>
 	relation_ref 138747 // <association>
       end
-
     end
 
     class 129613 "Arbitro"
