@@ -20,8 +20,11 @@
 <li>Java : package class Emplazamiento </li></ul><div class="sub">
 <a name="refrelation131884"></a>
 <table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class128300.html#refclass128300"><b>Direccion</b></a></li><li>Java : private <a href="class128300.html#refclass128300"><b>Direccion</b></a> </li></ul><a name="refrelation132268"></a>
-<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class129357.html#refclass129357"><b>Evento</b></a></li><li>Java : private <a href="class129357.html#refclass129357"><b>Evento</b></a> </li></ul><a name="refattribute128007"></a>
-<table><tr><td><div class="element">Attribute <b>_direccion</b></div></td></tr></table>
-<p>Declaration :</p><ul><li>Uml : - _direccion : </li><li>Java : private  _direccion</li></ul></div>
+<table><tr><td><div class="element">Relation <b>miEvento (&lt;association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - miEvento : <a href="class129357.html#refclass129357"><b>Evento</b></a>, multiplicity : *</li><li>Java : private <a href="class129357.html#refclass129357"><b>Evento</b></a> miEvento</li></ul><a name="refrelation128278"></a>
+<table><tr><td><div class="element">Relation <b>miDireccion (&lt;association&gt;)</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : - miDireccion : <a href="class128300.html#refclass128300"><b>Direccion</b></a>, multiplicity : 1</li><li>Java : private <a href="class128300.html#refclass128300"><b>Direccion</b></a> miDireccion</li></ul><a name="refoperation128662"></a>
+<table><tr><td><div class="element">Operation <b>dameEventos</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + dameEventos() : Evento[]</li><li>Java : public Evento[] dameEventos()</li></ul><a name="refattribute129046"></a>
+<table><tr><td><div class="element">Attribute <b>_aforo</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - _aforo : int</li><li>Java : private int _aforo</li></ul></div>
+<p>All public operations : <a href="class128556.html#refoperation128662"><b>dameEventos</b></a> </p>
 </body>
 </html>
