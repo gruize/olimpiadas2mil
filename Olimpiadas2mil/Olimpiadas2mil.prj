@@ -1,7 +1,7 @@
 format 70
 "Olimpiadas2mil"
-  revision 11
-  modified_by 23 "golthiryus"
+  revision 10
+  modified_by 22 "hlocal"
 
 
   
@@ -1138,19 +1138,6 @@ ${members}}
       classrelation 130476 // <association>
 	relation_ref 129196 // <association>
       end
-
-      operation 128151 "nuevoEquipo"
-	public explicit_return_type ""
-	nparams 1
-	  param in name "c" type class_ref 129869 // Competicion
-	
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
     end
 
     class 129357 "Evento"
@@ -1194,16 +1181,16 @@ ${members}}
 	relation_ref 128123 // <association>
       end
 
-      classrelation 128044 // misEquipos (<association>)
+      classrelation 128044 // <association>
 	relation 128044 ----
-	  a role_name "misEquipos" multiplicity "*" private
+	  a role_name "" multiplicity "1..*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 128044 // misEquipos (<association>)
-	  b role_name "misEventos" multiplicity "*" private
+	    classrelation_ref 128044 // <association>
+	  b role_name "" multiplicity "1..*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 128172 // misEventos (<association>)
+	    classrelation_ref 128172 // <association>
       end
 
       classrelation 132140 // miEmplazamiento (<association>)
@@ -1311,7 +1298,7 @@ ${members}}
 	public explicit_return_type "void"
 	nparams 0
 	
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
   ${body}}
 "
 	
@@ -1435,7 +1422,7 @@ ${members}}
 	relation_ref 128300 // <association>
       end
 
-      classrelation 128940 // misEquipos (<association>)
+      classrelation 128940 // <association>
 	relation_ref 128428 // <association>
       end
     end
@@ -1518,19 +1505,6 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
-      end
-
-      operation 128279 "añadirEquipo"
-	public explicit_return_type ""
-	nparams 1
-	  param in name "e" type class_ref 128044 // Equipo
-	
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
       end
     end
 
@@ -1863,20 +1837,20 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 128172 // misEventos (<association>)
+      classrelation 128172 // <association>
 	relation_ref 128044 // <association>
       end
 
       classrelation 128812 // misDeportistas (<association>)
 	relation 128428 ----
-	  a role_name "misDeportistas" multiplicity "*" private
+	  a role_name "misDeportistas" multiplicity "1..*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 128812 // misDeportistas (<association>)
-	  b role_name "misEquipos" multiplicity "*" private
+	  b role_name "misEquipos" multiplicity "1..*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 128940 // misEquipos (<association>)
+	    classrelation_ref 128940 // <association>
       end
 
       classrelation 130348 // miFederacion (<association>)
@@ -2143,11 +2117,6 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-    end
-
-    sequencediagram 128023 "altaEquipo"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
-      overlapping_bars size A4
     end
   end
 end

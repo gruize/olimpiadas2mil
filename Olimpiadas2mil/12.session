@@ -1,11 +1,13 @@
 window_sizes 960 672 240 720 512 82
 diagrams
-  active  classdiagram_ref 128973 // General
-    567 412 100 4 0 0
+  classdiagram_ref 128973 // General
+    567 412 100 4 539 0
+  active  activitydiagram_ref 134540 // AltaCompeticion
+    710 516 100 4 0 0
 end
 show_stereotypes
-selected classdiagram_ref 128973 // General
+selected activitydiagram_ref 134540 // AltaCompeticion
 open
-  classview_ref 128205 // Diagrama de clases
+  activity_ref 134540 // Actividad
 end
 end
