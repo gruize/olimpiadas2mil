@@ -85,15 +85,15 @@ end
 relationcanvas 128172 relation_ref 128044 // <association>
   decenter_begin 135
   from ref 128333 z 2001 to ref 128044
-  role_a_pos 77 186 3000 no_role_b
-  multiplicity_a_pos 72 213 3000 multiplicity_b_pos 474 215 3000
+  role_a_pos 72 186 3000 role_b_pos 433 188 3000
+  multiplicity_a_pos 72 213 3000 multiplicity_b_pos 486 215 3000
 end
 relationcanvas 128263 relation_ref 128007 // <association>
   decenter_begin 228
   decenter_end 699
   from ref 128135 z 2001 to ref 129485
-  role_a_pos 343 103 3000 role_b_pos 343 291 3000
-  multiplicity_a_pos 317 103 3000 multiplicity_b_pos 307 291 3000
+  role_a_pos 344 119 3000 role_b_pos 343 289 3000
+  multiplicity_a_pos 318 119 3000 multiplicity_b_pos 307 289 3000
 end
 relationcanvas 128507 relation_ref 128123 // <association>
   decenter_end 569
@@ -106,7 +106,7 @@ relationcanvas 128556 relation_ref 128428 // <association>
   decenter_end 349
   from ref 128044 z 2001 to ref 131323
   role_a_pos 47 391 3000 role_b_pos 47 238 3000
-  multiplicity_a_pos 11 391 3000 multiplicity_b_pos 23 238 3000
+  multiplicity_a_pos 23 391 3000 multiplicity_b_pos 23 238 3000
 end
 relationcanvas 128763 relation_ref 128251 // <association>
   from ref 128123 z 2011 to ref 128251
@@ -125,7 +125,7 @@ relationcanvas 129068 relation_ref 128684 // <association>
   decenter_end 180
   from ref 131451 z 2006 to ref 129485
   no_role_a no_role_b
-  multiplicity_a_pos 262 103 3000 multiplicity_b_pos 134 243 3000
+  multiplicity_a_pos 261 119 3000 multiplicity_b_pos 135 241 3000
 end
 relationcanvas 129324 relation_ref 128812 // <association>
   from ref 129147 z 2001 to ref 129531
@@ -138,7 +138,7 @@ relationcanvas 129613 relation_ref 128717 // <association>
   from ref 128333 z 2001 to point 557 48
   line 131606 z 2001 to ref 129485
   no_role_a no_role_b
-  multiplicity_a_pos 373 58 3000 multiplicity_b_pos 536 163 3000
+  multiplicity_a_pos 375 67 3000 multiplicity_b_pos 536 163 3000
 end
 relationcanvas 129686 relation_ref 128150 // <association>
   decenter_begin 546
@@ -151,8 +151,8 @@ relationcanvas 129836 relation_ref 129196 // <association>
   decenter_begin 509
   decenter_end 409
   from ref 128044 z 2001 to ref 128205
-  role_a_pos 46 90 3000 role_b_pos 14 143 3000
-  multiplicity_a_pos 20 90 3000 multiplicity_b_pos 23 160 3000
+  role_a_pos 50 100 3000 role_b_pos 47 160 3000
+  multiplicity_a_pos 24 100 3000 multiplicity_b_pos 23 160 3000
 end
 relationcanvas 129942 relation_ref 128278 // <association>
   from ref 129558 z 2001 to ref 128891
@@ -161,8 +161,8 @@ relationcanvas 129942 relation_ref 128278 // <association>
 end
 relationcanvas 130092 relation_ref 129324 // <association>
   from ref 129485 z 2001 to ref 128044
-  role_a_pos 72 154 3000 role_b_pos 181 52 3000
-  multiplicity_a_pos 66 168 3000 multiplicity_b_pos 246 79 3000
+  role_a_pos 72 166 3000 role_b_pos 181 56 3000
+  multiplicity_a_pos 72 193 3000 multiplicity_b_pos 246 83 3000
 end
 relationcanvas 130381 relation_ref 129101 // <association>
   from ref 130253 z 2001 to ref 128333
