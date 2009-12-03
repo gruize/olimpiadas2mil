@@ -1,7 +1,12 @@
 format 70
 "Olimpiadas2mil"
+<<<<<<< .mine
+  revision 11
+  modified_by 23 "golthiryus"
+=======
   revision 12
   modified_by 7 "hlocal"
+>>>>>>> .r24
 
 
   
@@ -1181,12 +1186,12 @@ ${members}}
 	relation_ref 128123 // <association>
       end
 
-      classrelation 128044 // <association>
+      classrelation 128044 // misEquipos (<association>)
 	relation 128044 ----
-	  a role_name "" multiplicity "1..*" private
+	  a role_name "misEquipos" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 128044 // <association>
+	    classrelation_ref 128044 // misEquipos (<association>)
 	  b role_name "" multiplicity "1..*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
@@ -1422,7 +1427,7 @@ ${members}}
 	relation_ref 128300 // <association>
       end
 
-      classrelation 128940 // <association>
+      classrelation 128940 // misEquipos (<association>)
 	relation_ref 128428 // <association>
       end
     end
@@ -1847,10 +1852,10 @@ ${members}}
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 128812 // misDeportistas (<association>)
-	  b role_name "misEquipos" multiplicity "1..*" private
+	  b role_name "misEquipos" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 128940 // <association>
+	    classrelation_ref 128940 // misEquipos (<association>)
       end
 
       classrelation 130348 // miFederacion (<association>)

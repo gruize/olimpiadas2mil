@@ -54,7 +54,7 @@ classcanvas 129558 class_ref 128300 // Direccion
 end
 classcanvas 130253 class_ref 129997 // Trabajador
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyzwh 678.7 72.5 2000 97 65
+  xyzwh 678.7 72.5 2000 97 67
 end
 classcanvas 130454 class_ref 128172 // TipoViaje
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
@@ -85,8 +85,8 @@ end
 relationcanvas 128172 relation_ref 128044 // <association>
   decenter_begin 135
   from ref 128333 z 2001 to ref 128044
-  no_role_a no_role_b
-  multiplicity_a_pos 69 212 3000 multiplicity_b_pos 474 214 3000
+  role_a_pos 77 186 3000 no_role_b
+  multiplicity_a_pos 72 213 3000 multiplicity_b_pos 474 215 3000
 end
 relationcanvas 128263 relation_ref 128007 // <association>
   decenter_begin 228
@@ -99,14 +99,14 @@ relationcanvas 128507 relation_ref 128123 // <association>
   decenter_end 569
   from ref 128251 z 2011 to ref 128333
   no_role_a no_role_b
-  multiplicity_a_pos 637 288 3000 multiplicity_b_pos 710 280 3000
+  multiplicity_a_pos 641 292 3000 multiplicity_b_pos 710 281 3000
 end
 relationcanvas 128556 relation_ref 128428 // <association>
   decenter_begin 504
   decenter_end 349
   from ref 128044 z 2001 to ref 131323
-  role_a_pos 53 394 3000 role_b_pos 52 234 3000
-  multiplicity_a_pos 7 394 3000 multiplicity_b_pos 7 234 3000
+  role_a_pos 47 391 3000 role_b_pos 47 238 3000
+  multiplicity_a_pos 11 391 3000 multiplicity_b_pos 23 238 3000
 end
 relationcanvas 128763 relation_ref 128251 // <association>
   from ref 128123 z 2011 to ref 128251
@@ -117,12 +117,12 @@ relationcanvas 129031 relation_ref 128263 // <association>
   decenter_begin 601
   decenter_end 407
   from ref 128333 z 2006 to ref 131451
-  role_a_pos 201 259 3000 role_b_pos 447 268 3000
-  multiplicity_a_pos 201 284 3000 multiplicity_b_pos 472 293 3000
+  role_a_pos 199 257 3000 role_b_pos 445 272 3000
+  multiplicity_a_pos 199 284 3000 multiplicity_b_pos 472 299 3000
 end
 relationcanvas 129068 relation_ref 128684 // <association>
   decenter_begin 291
-  decenter_end 181
+  decenter_end 180
   from ref 131451 z 2006 to ref 129485
   no_role_a no_role_b
   multiplicity_a_pos 262 103 3000 multiplicity_b_pos 134 243 3000
@@ -135,10 +135,10 @@ end
 relationcanvas 129613 relation_ref 128717 // <association>
   decenter_begin 467
   decenter_end 531
-  from ref 128333 z 2001 to point 557.1 48
+  from ref 128333 z 2001 to point 557 48
   line 131606 z 2001 to ref 129485
   no_role_a no_role_b
-  multiplicity_a_pos 373 58 3000 multiplicity_b_pos 534 165 3000
+  multiplicity_a_pos 373 58 3000 multiplicity_b_pos 536 163 3000
 end
 relationcanvas 129686 relation_ref 128150 // <association>
   decenter_begin 546
@@ -151,8 +151,8 @@ relationcanvas 129836 relation_ref 129196 // <association>
   decenter_begin 509
   decenter_end 409
   from ref 128044 z 2001 to ref 128205
-  role_a_pos 46 88 3000 role_b_pos 46 162 3000
-  multiplicity_a_pos 20 88 3000 multiplicity_b_pos 22 162 3000
+  role_a_pos 46 90 3000 role_b_pos 14 143 3000
+  multiplicity_a_pos 20 90 3000 multiplicity_b_pos 23 160 3000
 end
 relationcanvas 129942 relation_ref 128278 // <association>
   from ref 129558 z 2001 to ref 128891
@@ -161,13 +161,13 @@ relationcanvas 129942 relation_ref 128278 // <association>
 end
 relationcanvas 130092 relation_ref 129324 // <association>
   from ref 129485 z 2001 to ref 128044
-  role_a_pos 70 166 3000 role_b_pos 184 51 3000
-  multiplicity_a_pos 70 191 3000 multiplicity_b_pos 246 76 3000
+  role_a_pos 72 154 3000 role_b_pos 181 52 3000
+  multiplicity_a_pos 66 168 3000 multiplicity_b_pos 246 79 3000
 end
 relationcanvas 130381 relation_ref 129101 // <association>
   from ref 130253 z 2001 to ref 128333
-  role_a_pos 637 172 3000 role_b_pos 601 108 3000
-  multiplicity_a_pos 637 197 3000 multiplicity_b_pos 677 133 3000
+  role_a_pos 648 181 3000 role_b_pos 695 145 3000
+  multiplicity_a_pos 610 181 3000 multiplicity_b_pos 671 145 3000
 end
 relationcanvas 131579 relation_ref 130043 // <generalisation>
   from ref 131323 z 2001 to ref 128461
@@ -188,16 +188,16 @@ end
 relationcanvas 132140 relation_ref 130092 // <association>
   decenter_begin 930
   decenter_end 873
-  from ref 128333 z 2001 to point 465.3 326.2
+  from ref 128333 z 2001 to point 465 326
   line 133270 z 2001 to ref 131884
-  role_a_pos 477 382 3000 role_b_pos 447 329 3000
-  multiplicity_a_pos 451 382 3000 multiplicity_b_pos 486 354 3000
+  role_a_pos 477 382 3000 role_b_pos 445 339 3000
+  multiplicity_a_pos 451 382 3000 multiplicity_b_pos 486 366 3000
 end
 relationcanvas 132886 relation_ref 128534 // <association>
   decenter_begin 651
   from ref 128333 z 2001 to ref 129147
-  role_a_pos 597 519 3000 role_b_pos 593 361 3000
-  multiplicity_a_pos 573 519 3000 multiplicity_b_pos 567 361 3000
+  role_a_pos 598 517 3000 role_b_pos 596 371 3000
+  multiplicity_a_pos 574 517 3000 multiplicity_b_pos 570 371 3000
 end
 relationcanvas 134294 relation_ref 135190 // <generalisation>
   from ref 128135 z 2001 to ref 128461
