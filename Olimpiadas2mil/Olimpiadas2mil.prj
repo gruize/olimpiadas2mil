@@ -1,12 +1,7 @@
 format 70
 "Olimpiadas2mil"
-<<<<<<< .mine
   revision 11
   modified_by 23 "golthiryus"
-=======
-  revision 12
-  modified_by 7 "hlocal"
->>>>>>> .r24
 
 
   
@@ -1143,6 +1138,19 @@ ${members}}
       classrelation 130476 // <association>
 	relation_ref 129196 // <association>
       end
+
+      operation 128151 "nuevoEquipo"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "c" type class_ref 129869 // Competicion
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
     end
 
     class 129357 "Evento"
@@ -1192,10 +1200,10 @@ ${members}}
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 128044 // misEquipos (<association>)
-	  b role_name "" multiplicity "1..*" private
+	  b role_name "misEventos" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 128172 // <association>
+	    classrelation_ref 128172 // misEventos (<association>)
       end
 
       classrelation 132140 // miEmplazamiento (<association>)
@@ -1303,7 +1311,7 @@ ${members}}
 	public explicit_return_type "void"
 	nparams 0
 	
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
   ${body}}
 "
 	
@@ -1510,6 +1518,19 @@ ${members}}
 	php_decl ""
 	python_decl ""
 	idl_decl ""
+      end
+
+      operation 128279 "añadirEquipo"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "e" type class_ref 128044 // Equipo
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
       end
     end
 
@@ -1842,13 +1863,13 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 128172 // <association>
+      classrelation 128172 // misEventos (<association>)
 	relation_ref 128044 // <association>
       end
 
       classrelation 128812 // misDeportistas (<association>)
 	relation 128428 ----
-	  a role_name "misDeportistas" multiplicity "1..*" private
+	  a role_name "misDeportistas" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 128812 // misDeportistas (<association>)
@@ -2124,36 +2145,9 @@ ${members}}
       
     end
 
-    sequencediagram 128007 "AltaEvento"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 128135 "BajaEvento"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 128263 "ModificacionEvento"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 128391 "AltaCompeticion"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 128519 "BajaCompeticion"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 128647 "ModificacionCompeticion"
+    sequencediagram 128023 "altaEquipo"
       show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default
       overlapping_bars size A4
     end
   end
-
-  package_ref 128007 // Diagramas de secuencia
 end
