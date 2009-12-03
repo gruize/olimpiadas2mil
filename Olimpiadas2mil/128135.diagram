@@ -1,0 +1,19 @@
+format 70
+
+classinstance 128903 class_ref 128333 // Gestor_event
+  name ""   xyz 58 4 2000 life_line_z 2000
+classinstance 129031 class_ref 129357 // Evento
+  name ""   xyz 236 4 2000 life_line_z 2000
+durationcanvas 129159 classinstance_ref 128903 // :Gestor_event
+  xyzwh 89 127 2010 11 40
+end
+durationcanvas 129287 classinstance_ref 129031 // :Evento
+  xyzwh 255 127 2010 11 25
+end
+msg 129415 synchronous
+  from durationcanvas_ref 129159
+  to durationcanvas_ref 129287
+  yz 127 2015 explicitmsg "eliminarEvento(id_evento)"
+  show_full_operations_definition default drawing_language default
+  label_xy 115 113
+end
