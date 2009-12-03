@@ -1,6 +1,6 @@
 format 70
 "Olimpiadas2mil"
-  revision 9
+  revision 10
   modified_by 22 "hlocal"
 
 
@@ -1151,7 +1151,7 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      attribute 128717 "_hora"
+      attribute 128717 "_horaInicio"
 	private explicit_type "date"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
@@ -1282,16 +1282,16 @@ ${members}}
 	
       end
 
-      classrelation 128790 // <association>
+      classrelation 128790 // misViajes (<association>)
 	relation 128534 ----
-	  a role_name "" private
+	  a role_name "misViajes" multiplicity "*" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 128790 // <association>
-	  b role_name "" private
+	    classrelation_ref 128790 // misViajes (<association>)
+	  b role_name "miEvento" multiplicity "1" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 128918 // <association>
+	    classrelation_ref 128918 // miEvento (<association>)
       end
 
       operation 129046 "creaViajes"
@@ -1304,6 +1304,26 @@ ${members}}
 	
 	
 	
+      end
+
+      attribute 142614 "_duracion"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 142870 "_id"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
     end
 
@@ -1427,7 +1447,7 @@ ${members}}
       end
 
       attribute 129485 "_restricciones"
-	private explicit_type "string"
+	private type class_ref 134550 // TipoRestricciones
 	stereotype "map"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
@@ -1723,8 +1743,28 @@ ${members}}
 	relation_ref 129708 // <association>
       end
 
-      classrelation 128918 // <association>
+      classrelation 128918 // miEvento (<association>)
 	relation_ref 128534 // <association>
+      end
+
+      attribute 142998 "_horaOrigen"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 143126 "_horaDestino"
+	private explicit_type "date"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
     end
 
@@ -1839,7 +1879,6 @@ ${members}}
 	python_decl ""
 	idl_decl ""
       end
-
     end
 
     class 128172 "TipoViaje"
@@ -2011,6 +2050,15 @@ ${members}}
 	idl_decl ""
       end
 
+      attribute 142742 "_restricciones"
+	private type class_ref 134550 // TipoRestricciones
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
     end
 
     class 128007 "Juez"
@@ -2046,6 +2094,19 @@ ${members}}
     end
 
     class 128022 "TipoAnuncio"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 134550 "TipoRestricciones"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
