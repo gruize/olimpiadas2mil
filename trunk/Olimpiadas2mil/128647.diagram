@@ -1,0 +1,21 @@
+format 70
+
+classinstance 128007 class_ref 129869 // Competicion
+  name ""   xyz 211 4 2000 life_line_z 2000
+classinstance 128135 class_ref 136059 // COI
+  name ""   xyz 79 4 2000 life_line_z 2000
+note 128647 "El id de la competicion no se puede modificar, pero con él, identificamos el evento."
+  color white  xyzwh 290.5 104.5 2000 157 63
+durationcanvas 128263 classinstance_ref 128135 // :COI
+  xyzwh 85 97 2010 11 40
+end
+durationcanvas 128391 classinstance_ref 128007 // :Competicion
+  xyzwh 242 97 2010 11 25
+end
+msg 128519 synchronous
+  from durationcanvas_ref 128263
+  to durationcanvas_ref 128391
+  yz 97 2015 explicitmsg "modificarCompeticion(id,restricciones,minParticipantes,maxParticipantes)"
+  show_full_operations_definition default drawing_language default
+  label_xy 96 77
+end
