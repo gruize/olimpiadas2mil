@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_OcuBYByUEd-I_sMS40L5rg">
+  <elementImport xmi:id="_Oe06MByUEd-I_sMS40L5rg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_Oe06MRyUEd-I_sMS40L5rg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_Oe06MhyUEd-I_sMS40L5rg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_Oe1hQByUEd-I_sMS40L5rg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_R69C0ByUEd-I_sMS40L5rg" name="Activity">
+    <node xmi:type="uml:InitialNode" xmi:id="_UwSRMByUEd-I_sMS40L5rg" outgoing="_VljEQByfEd-I_sMS40L5rg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_GshagByfEd-I_sMS40L5rg" name="Introduce los datos del evento" outgoing="_WjcP4ByfEd-I_sMS40L5rg" incoming="_VljEQByfEd-I_sMS40L5rg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_RmDI0ByfEd-I_sMS40L5rg" name="DecisionNode" incoming="_WjcP4ByfEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_VljEQByfEd-I_sMS40L5rg" source="_UwSRMByUEd-I_sMS40L5rg" target="_GshagByfEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WjcP4ByfEd-I_sMS40L5rg" source="_GshagByfEd-I_sMS40L5rg" target="_RmDI0ByfEd-I_sMS40L5rg"/>
+  </packagedElement>
+</uml:Package>
