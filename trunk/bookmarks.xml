@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookmarks>
+   <site url="http://download.eclipse.org/technology/epp/packages/galileo" selected="true" name="EPP Packages Repository"/>
+   <site url="http://download.eclipse.org/releases/galileo" selected="true" name="Galileo"/>
+   <site url="http://subclipse.tigris.org/update_1.6.x" selected="true" name="subclipse"/>
+   <site url="http://download.eclipse.org/eclipse/updates/3.5" selected="true" name="The Eclipse Project Updates"/>
+</bookmarks>
