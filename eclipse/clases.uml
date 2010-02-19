@@ -28,6 +28,7 @@
     <ownedAttribute xmi:id="_wiSAABxpEd-bu4pqJ0Lz8w" name="maxEquipos" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
     </ownedAttribute>
+    <ownedAttribute xmi:id="_hK104B16Ed-sX-Px44GRFQ" name="tipoArbitro" type="_m2md0B16Ed-sX-Px44GRFQ" aggregation="composite"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_2jcGoBxoEd-bu4pqJ0Lz8w" memberEnd="_2jctsBxoEd-bu4pqJ0Lz8w _2jd70RxoEd-bu4pqJ0Lz8w">
     <ownedEnd xmi:id="_2jctsBxoEd-bu4pqJ0Lz8w" name="misEquipos" type="_P36RABxoEd-bu4pqJ0Lz8w" association="_2jcGoBxoEd-bu4pqJ0Lz8w">
@@ -44,11 +45,6 @@
     <ownedAttribute xmi:id="_KPMqIBxqEd-bu4pqJ0Lz8w" name="id" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
-    <ownedOperation xmi:id="_ltiOkBxqEd-bu4pqJ0Lz8w" name="asignarTrabajadores">
-      <ownedParameter xmi:id="_NsTNsBxrEd-bu4pqJ0Lz8w" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedParameter>
-    </ownedOperation>
     <ownedOperation xmi:id="_SG-pQBxrEd-bu4pqJ0Lz8w" name="asignarArbitros"/>
     <ownedOperation xmi:id="_agyz4BxrEd-bu4pqJ0Lz8w" name="asignarEmplazamiento"/>
     <ownedOperation xmi:id="_FjXzIB05Ed-HGKXrA_WGfg" name="añadirEquipo">
@@ -218,6 +214,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_vbgBgBySEd-I_sMS40L5rg" name="tipos">
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_VoVhEBx0Ed-_7LrKzP6X3g" name="tipoRestriccion"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_m2md0B16Ed-sX-Px44GRFQ" name="TipoArbitro"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_pio7QByTEd-I_sMS40L5rg" memberEnd="_pipiUByTEd-I_sMS40L5rg _pirXgByTEd-I_sMS40L5rg">
     <ownedEnd xmi:id="_pipiUByTEd-I_sMS40L5rg" name="asiento" type="_2yeEgByREd-I_sMS40L5rg" association="_pio7QByTEd-I_sMS40L5rg">
