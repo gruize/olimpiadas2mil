@@ -135,7 +135,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i2dvQBx0Ed-_7LrKzP6X3g"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_1w2PcByREd-I_sMS40L5rg" name="Reserva">
+  <packagedElement xmi:type="uml:Class" xmi:id="_1w2PcByREd-I_sMS40L5rg" name="Entrada">
     <ownedAttribute xmi:id="_LVws8ByTEd-I_sMS40L5rg" name="numAsiento" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
     </ownedAttribute>
@@ -224,7 +224,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_piqwcByTEd-I_sMS40L5rg" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_piqJYByTEd-I_sMS40L5rg" value="1"/>
     </ownedEnd>
-    <ownedEnd xmi:id="_pirXgByTEd-I_sMS40L5rg" name="misReservas" type="_1w2PcByREd-I_sMS40L5rg" association="_pio7QByTEd-I_sMS40L5rg">
+    <ownedEnd xmi:id="_pirXgByTEd-I_sMS40L5rg" name="misEntradas" type="_1w2PcByREd-I_sMS40L5rg" association="_pio7QByTEd-I_sMS40L5rg">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pisloByTEd-I_sMS40L5rg" value="*"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pir-kByTEd-I_sMS40L5rg"/>
     </ownedEnd>
@@ -286,7 +286,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BSWHAB0yEd-HGKXrA_WGfg" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BSVf8B0yEd-HGKXrA_WGfg" value="1"/>
     </ownedEnd>
-    <ownedEnd xmi:id="_BSWuEB0yEd-HGKXrA_WGfg" name="misReservas" type="_1w2PcByREd-I_sMS40L5rg" association="_BSTqwB0yEd-HGKXrA_WGfg">
+    <ownedEnd xmi:id="_BSWuEB0yEd-HGKXrA_WGfg" name="misEntradas" type="_1w2PcByREd-I_sMS40L5rg" association="_BSTqwB0yEd-HGKXrA_WGfg">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EFCREB0yEd-HGKXrA_WGfg" value="*"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EFC4IB0yEd-HGKXrA_WGfg"/>
     </ownedEnd>
