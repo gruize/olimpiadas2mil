@@ -1,0 +1,4 @@
+Todo evento su emplazamiento cumple las restricciones de la competicion
+Dado un emplazamiento no hay mas eventos asignados que necesiten recurso que recursos tiene el emplazamiento
+La interseccion entre dias que hay eventos en un emplazamiento y reservas no libres es vacia
+para todos los asientos, no tienes dos reservas en el mismo momento
