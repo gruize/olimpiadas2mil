@@ -111,8 +111,8 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d6e3EBxsEd-bu4pqJ0Lz8w"/>
     </ownedEnd>
     <ownedEnd xmi:id="_d6feIBxsEd-bu4pqJ0Lz8w" name="misArbitros" type="_d5Z5ABxsEd-bu4pqJ0Lz8w" association="_d6do8BxsEd-bu4pqJ0Lz8w">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d6gFMBxsEd-bu4pqJ0Lz8w" value="*"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d6feIRxsEd-bu4pqJ0Lz8w" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CqeHAB1zEd-AfY6DOto6rw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CqeuEB1zEd-AfY6DOto6rw" value="1"/>
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_241LABxsEd-bu4pqJ0Lz8w" name="Persona">
@@ -153,56 +153,6 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i2dvQBx0Ed-_7LrKzP6X3g"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_NZ29kByREd-I_sMS40L5rg" name="GestorReservas">
-    <ownedOperation xmi:id="_aSakYByREd-I_sMS40L5rg" name="vender">
-      <ownedParameter xmi:id="_bK8N8B04Ed-HGKXrA_WGfg" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedParameter>
-      <ownedParameter xmi:id="_bK81AB04Ed-HGKXrA_WGfg" name="reserva" type="_1w2PcByREd-I_sMS40L5rg"/>
-      <ownedParameter xmi:id="_bK9cEB04Ed-HGKXrA_WGfg" name="c" type="_8Tp_cB0xEd-HGKXrA_WGfg"/>
-    </ownedOperation>
-    <ownedOperation xmi:id="_bPzZsByREd-I_sMS40L5rg" name="reservar">
-      <ownedParameter xmi:id="_cWIOsB04Ed-HGKXrA_WGfg" type="_1w2PcByREd-I_sMS40L5rg" direction="return"/>
-      <ownedParameter xmi:id="_cWI1wB04Ed-HGKXrA_WGfg" name="asiento" type="_2yeEgByREd-I_sMS40L5rg"/>
-      <ownedParameter xmi:id="_cWJc0B04Ed-HGKXrA_WGfg" name="c" type="_8Tp_cB0xEd-HGKXrA_WGfg"/>
-      <ownedParameter xmi:id="_cWKD4B04Ed-HGKXrA_WGfg" name="instanteComienzo">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
-      </ownedParameter>
-      <ownedParameter xmi:id="_cWKq8B04Ed-HGKXrA_WGfg" name="instanteFinal">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:id="_x8l6sByREd-I_sMS40L5rg" name="anular" precondition="_JHxkcB0tEd-HGKXrA_WGfg" postcondition="_P5n34BzOEd-HGKXrA_WGfg">
-      <ownedRule xmi:id="_P5n34BzOEd-HGKXrA_WGfg" name="asientoLibre">
-        <specification xmi:type="uml:OpaqueExpression" xmi:id="_P5oe8BzOEd-HGKXrA_WGfg">
-          <language>OCL</language>
-          <body>asiento.estado = disponible</body>
-        </specification>
-      </ownedRule>
-      <ownedRule xmi:id="_JHxkcB0tEd-HGKXrA_WGfg" name="asientoReservado">
-        <specification xmi:type="uml:OpaqueExpression" xmi:id="_JH1O0B0tEd-HGKXrA_WGfg">
-          <language>OCL</language>
-          <body>asiento.estado == reservado</body>
-        </specification>
-      </ownedRule>
-      <ownedParameter xmi:id="_XewQEB04Ed-HGKXrA_WGfg" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedParameter>
-      <ownedParameter xmi:id="_Xew3IB04Ed-HGKXrA_WGfg" name="asiento" type="_1w2PcByREd-I_sMS40L5rg"/>
-      <ownedParameter xmi:id="_XexeMB04Ed-HGKXrA_WGfg" name="comprador" type="_8Tp_cB0xEd-HGKXrA_WGfg"/>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_O9_CwByREd-I_sMS40L5rg" memberEnd="_O-BfAByREd-I_sMS40L5rg _O-DUMByREd-I_sMS40L5rg">
-    <ownedEnd xmi:id="_O-BfAByREd-I_sMS40L5rg" name="miEvento" type="_t2S-EBxtEd-bu4pqJ0Lz8w" association="_O9_CwByREd-I_sMS40L5rg">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O-CtIRyREd-I_sMS40L5rg" value="1"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O-CtIByREd-I_sMS40L5rg" value="1"/>
-    </ownedEnd>
-    <ownedEnd xmi:id="_O-DUMByREd-I_sMS40L5rg" name="miGestor" type="_NZ29kByREd-I_sMS40L5rg" association="_O9_CwByREd-I_sMS40L5rg">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O-D7QRyREd-I_sMS40L5rg" value="1"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O-D7QByREd-I_sMS40L5rg" value="1"/>
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_UIOTAByREd-I_sMS40L5rg" value=""/>
-    </ownedEnd>
-  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_1w2PcByREd-I_sMS40L5rg" name="Reserva">
     <ownedAttribute xmi:id="_LVws8ByTEd-I_sMS40L5rg" name="numAsiento" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
@@ -232,6 +182,40 @@
       <ownedParameter xmi:id="_JQTRgB0xEd-HGKXrA_WGfg" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_aSakYByREd-I_sMS40L5rg" name="vender">
+      <ownedParameter xmi:id="_f3BEQB10Ed-AfY6DOto6rw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_f3BrUB10Ed-AfY6DOto6rw" name="c" type="_8Tp_cB0xEd-HGKXrA_WGfg"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_bPzZsByREd-I_sMS40L5rg" name="reservar">
+      <ownedParameter xmi:id="_b1Zo8B10Ed-AfY6DOto6rw" type="_1w2PcByREd-I_sMS40L5rg" direction="return"/>
+      <ownedParameter xmi:id="_b1Zo8R10Ed-AfY6DOto6rw" name="c" type="_8Tp_cB0xEd-HGKXrA_WGfg"/>
+      <ownedParameter xmi:id="_b1Zo8h10Ed-AfY6DOto6rw" name="instanteComienzo">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_b1Zo8x10Ed-AfY6DOto6rw" name="instanteFinal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_x8l6sByREd-I_sMS40L5rg" name="anular" precondition="_JHxkcB0tEd-HGKXrA_WGfg" postcondition="_P5n34BzOEd-HGKXrA_WGfg">
+      <ownedRule xmi:id="_P5n34BzOEd-HGKXrA_WGfg" name="asientoLibre">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_P5oe8BzOEd-HGKXrA_WGfg">
+          <language>OCL</language>
+          <body>asiento.estado = disponible</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_JHxkcB0tEd-HGKXrA_WGfg" name="asientoReservado">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_JH1O0B0tEd-HGKXrA_WGfg">
+          <language>OCL</language>
+          <body>asiento.estado == reservado</body>
+        </specification>
+      </ownedRule>
+      <ownedParameter xmi:id="_a58GQB10Ed-AfY6DOto6rw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_a58GQR10Ed-AfY6DOto6rw" name="comprador" type="_8Tp_cB0xEd-HGKXrA_WGfg"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_2yeEgByREd-I_sMS40L5rg" name="Asiento">
@@ -323,6 +307,16 @@
     <ownedEnd xmi:id="_BSWuEB0yEd-HGKXrA_WGfg" name="misReservas" type="_1w2PcByREd-I_sMS40L5rg" association="_BSTqwB0yEd-HGKXrA_WGfg">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EFCREB0yEd-HGKXrA_WGfg" value="*"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EFC4IB0yEd-HGKXrA_WGfg"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FJH6wB1zEd-AfY6DOto6rw" memberEnd="_FJLlIB1zEd-AfY6DOto6rw _FJNaUR1zEd-AfY6DOto6rw">
+    <ownedEnd xmi:id="_FJLlIB1zEd-AfY6DOto6rw" name="misArbitros" type="_d5Z5ABxsEd-bu4pqJ0Lz8w" association="_FJH6wB1zEd-AfY6DOto6rw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HbPHUB1zEd-AfY6DOto6rw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HbQVcB1zEd-AfY6DOto6rw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_FJNaUR1zEd-AfY6DOto6rw" name="miEvento" type="_3-U60BxpEd-bu4pqJ0Lz8w" association="_FJH6wB1zEd-AfY6DOto6rw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FJOocB1zEd-AfY6DOto6rw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FJOBYB1zEd-AfY6DOto6rw" value="1"/>
     </ownedEnd>
   </packagedElement>
 </uml:Package>
