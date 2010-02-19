@@ -519,7 +519,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_8UgUAR0xEd-HGKXrA_WGfg"/>
     <element xmi:type="uml:Class" href="clases.uml#_8Tp_cB0xEd-HGKXrA_WGfg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8UgUAh0xEd-HGKXrA_WGfg" x="1668" y="72"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8UgUAh0xEd-HGKXrA_WGfg" x="1860" y="45"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_COw6wBxoEd-bu4pqJ0Lz8w"/>
   <styles xmi:type="uml2tools.notation:U2TDiagramCanonicalStyle" xmi:id="_COw6wRxoEd-bu4pqJ0Lz8w"/>
