@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:uml2tools.notation="http://www.eclipse.org/mdt/uml2tools/gmf/notation/ext/2008" xmi:id="_KGgf0Bx4Ed-_7LrKzP6X3g" type="UMLUseCase" name="transporte.umlusc" measurementUnit="Pixel">
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_KGgf0Rx4Ed-_7LrKzP6X3g"/>
-  <styles xmi:type="uml2tools.notation:U2TDiagramCanonicalStyle" xmi:id="_KGgf0hx4Ed-_7LrKzP6X3g"/>
-  <element xmi:type="uml:Package" href="transporte.uml#_KEAlcBx4Ed-_7LrKzP6X3g"/>
-</notation:Diagram>

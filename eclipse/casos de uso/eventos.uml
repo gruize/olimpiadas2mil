@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_N4fZIBx3Ed-_7LrKzP6X3g" name="eventos">
-  <ownedComment xmi:id="_3-CekBx3Ed-_7LrKzP6X3g">
-    <body>El evento lleva implicito 
-un alojamiento, un horario,
-arbitro y participantes</body>
-  </ownedComment>
   <elementImport xmi:id="_N69eUBx3Ed-_7LrKzP6X3g">
     <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
   </elementImport>
@@ -30,7 +25,10 @@ arbitro y participantes</body>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dclZIBx3Ed-_7LrKzP6X3g" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_fZd8kBx3Ed-_7LrKzP6X3g" name="crear evento"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_fZd8kBx3Ed-_7LrKzP6X3g" name="crear evento">
+    <include xmi:id="_w79g4CIzEd-47PtQ7kdwKg" addition="_owetMCIzEd-47PtQ7kdwKg"/>
+    <include xmi:id="_bufoICI0Ed-47PtQ7kdwKg" addition="_8edTsCIzEd-47PtQ7kdwKg"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_jDySMBx3Ed-_7LrKzP6X3g" name="modificar evento"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_k-9lcBx3Ed-_7LrKzP6X3g" name="eliminar evento"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_qGdDsBx3Ed-_7LrKzP6X3g" name="consultar evento"/>
@@ -83,5 +81,19 @@ arbitro y participantes</body>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xZ9tkBx3Ed-_7LrKzP6X3g" value="1"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xZ9GgBx3Ed-_7LrKzP6X3g" value="1"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_owetMCIzEd-47PtQ7kdwKg" name="Buscar emplazamiento">
+    <include xmi:id="_PvrswCI0Ed-47PtQ7kdwKg" addition="_C-DNUCI0Ed-47PtQ7kdwKg"/>
+    <extend xmi:id="_yVNy0CIzEd-47PtQ7kdwKg" extendedCase="_jDySMBx3Ed-_7LrKzP6X3g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8edTsCIzEd-47PtQ7kdwKg" name="Intruducir datos">
+    <extend xmi:id="_Wg3FoCI0Ed-47PtQ7kdwKg" extendedCase="_jDySMBx3Ed-_7LrKzP6X3g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_C-DNUCI0Ed-47PtQ7kdwKg" name="Reservar emplazamiento"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_R4U0QCI0Ed-47PtQ7kdwKg" name="Introducir Arbitros">
+    <extend xmi:id="_YWH-ICI0Ed-47PtQ7kdwKg" extendedCase="_jDySMBx3Ed-_7LrKzP6X3g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Tv1IcCI0Ed-47PtQ7kdwKg" name="Introducir equipos">
+    <extend xmi:id="_ZMEusCI0Ed-47PtQ7kdwKg" extendedCase="_jDySMBx3Ed-_7LrKzP6X3g"/>
   </packagedElement>
 </uml:Package>
