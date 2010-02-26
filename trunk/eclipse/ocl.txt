@@ -6,4 +6,4 @@ La interseccion entre dias que hay eventos en un emplazamiento y reservas no lib
 
 
 para todos los asientos, no tienes dos reservas en el mismo momento
-Context Asiento inv self.misReservas.allInstances()->forAll(r1,r2|r1.instante <>r2.instante)
+Context Asiento inv self.misReservas->forAll(r1,r2|r1.instante <>r2.instante)
