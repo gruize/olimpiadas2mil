@@ -28,6 +28,7 @@
   <packagedElement xmi:type="uml:UseCase" xmi:id="_fZd8kBx3Ed-_7LrKzP6X3g" name="crear evento">
     <include xmi:id="_w79g4CIzEd-47PtQ7kdwKg" addition="_owetMCIzEd-47PtQ7kdwKg"/>
     <include xmi:id="_bufoICI0Ed-47PtQ7kdwKg" addition="_8edTsCIzEd-47PtQ7kdwKg"/>
+    <include xmi:id="_mEWhQCL7Ed-eLbmO0mYN8A" addition="_kiTfsCL7Ed-eLbmO0mYN8A"/>
   </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_jDySMBx3Ed-_7LrKzP6X3g" name="modificar evento"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_k-9lcBx3Ed-_7LrKzP6X3g" name="eliminar evento"/>
@@ -86,9 +87,7 @@
     <include xmi:id="_PvrswCI0Ed-47PtQ7kdwKg" addition="_C-DNUCI0Ed-47PtQ7kdwKg"/>
     <extend xmi:id="_yVNy0CIzEd-47PtQ7kdwKg" extendedCase="_jDySMBx3Ed-_7LrKzP6X3g"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_8edTsCIzEd-47PtQ7kdwKg" name="Intruducir datos">
-    <extend xmi:id="_Wg3FoCI0Ed-47PtQ7kdwKg" extendedCase="_jDySMBx3Ed-_7LrKzP6X3g"/>
-  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_8edTsCIzEd-47PtQ7kdwKg" name="Intruducir datos"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_C-DNUCI0Ed-47PtQ7kdwKg" name="Reservar emplazamiento"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_R4U0QCI0Ed-47PtQ7kdwKg" name="Introducir Arbitros">
     <extend xmi:id="_YWH-ICI0Ed-47PtQ7kdwKg" extendedCase="_jDySMBx3Ed-_7LrKzP6X3g"/>
@@ -96,4 +95,5 @@
   <packagedElement xmi:type="uml:UseCase" xmi:id="_Tv1IcCI0Ed-47PtQ7kdwKg" name="Introducir equipos">
     <extend xmi:id="_ZMEusCI0Ed-47PtQ7kdwKg" extendedCase="_jDySMBx3Ed-_7LrKzP6X3g"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_kiTfsCL7Ed-eLbmO0mYN8A" name="Introducir fecha, hora y duración"/>
 </uml:Package>
