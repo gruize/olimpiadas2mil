@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_M32uUCVFEd-7mJyBbxqKTw">
+  <elementImport xmi:id="_M5DBQSVFEd-7mJyBbxqKTw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_M5DBQiVFEd-7mJyBbxqKTw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_M5DBQyVFEd-7mJyBbxqKTw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_M5DBRCVFEd-7mJyBbxqKTw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_PEN4MCVFEd-7mJyBbxqKTw" name="Entrada">
+    <region xmi:id="_PE0VICVFEd-7mJyBbxqKTw" name="Region">
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_UI6hICVFEd-7mJyBbxqKTw"/>
+      <subvertex xmi:type="uml:State" xmi:id="_U_AboCVFEd-7mJyBbxqKTw" name="Reservada"/>
+      <subvertex xmi:type="uml:State" xmi:id="_Wh81ECVFEd-7mJyBbxqKTw" name="Comprada"/>
+      <subvertex xmi:type="uml:State" xmi:id="_aOle4CVFEd-7mJyBbxqKTw" name="Libre"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_Zxs5ICVGEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_lB2NICVFEd-7mJyBbxqKTw" source="_UI6hICVFEd-7mJyBbxqKTw" target="_aOle4CVFEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_sZnr8CVFEd-7mJyBbxqKTw" source="_aOle4CVFEd-7mJyBbxqKTw" target="_U_AboCVFEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_xMSJsCVFEd-7mJyBbxqKTw" source="_U_AboCVFEd-7mJyBbxqKTw" target="_Wh81ECVFEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_3WQ_sCVFEd-7mJyBbxqKTw" source="_U_AboCVFEd-7mJyBbxqKTw" target="_aOle4CVFEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_aRvrICVGEd-7mJyBbxqKTw" source="_Wh81ECVFEd-7mJyBbxqKTw" target="_Zxs5ICVGEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_bso70CVGEd-7mJyBbxqKTw" source="_aOle4CVFEd-7mJyBbxqKTw" target="_Zxs5ICVGEd-7mJyBbxqKTw"/>
+    </region>
+  </packagedElement>
+</uml:Package>

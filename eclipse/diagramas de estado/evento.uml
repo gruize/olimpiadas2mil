@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_kWz2oCVGEd-7mJyBbxqKTw">
+  <elementImport xmi:id="_kX2_gCVGEd-7mJyBbxqKTw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_kX2_gSVGEd-7mJyBbxqKTw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_kX2_giVGEd-7mJyBbxqKTw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_kX2_gyVGEd-7mJyBbxqKTw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_lvVIwCVGEd-7mJyBbxqKTw" name="Eventos">
+    <region xmi:id="_lvoDsCVGEd-7mJyBbxqKTw" name="Region">
+      <subvertex xmi:type="uml:State" xmi:id="_tFwjwCVGEd-7mJyBbxqKTw" name="Creado"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_uG4CgCVGEd-7mJyBbxqKTw"/>
+      <subvertex xmi:type="uml:State" xmi:id="_y4y5YCVGEd-7mJyBbxqKTw" name="Planificado"/>
+      <subvertex xmi:type="uml:State" xmi:id="_AsboYCVHEd-7mJyBbxqKTw" name="Preparado"/>
+      <subvertex xmi:type="uml:State" xmi:id="_PbrEACVHEd-7mJyBbxqKTw" name="Finalizado"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_VqldUCVHEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_uz4ScCVGEd-7mJyBbxqKTw" source="_uG4CgCVGEd-7mJyBbxqKTw" target="_tFwjwCVGEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_0xC0cCVGEd-7mJyBbxqKTw" source="_tFwjwCVGEd-7mJyBbxqKTw" target="_y4y5YCVGEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_JyLE4CVHEd-7mJyBbxqKTw" source="_y4y5YCVGEd-7mJyBbxqKTw" target="_AsboYCVHEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_QkiwkCVHEd-7mJyBbxqKTw" source="_AsboYCVHEd-7mJyBbxqKTw" target="_PbrEACVHEd-7mJyBbxqKTw"/>
+      <transition xmi:id="_WvR0gCVHEd-7mJyBbxqKTw" source="_PbrEACVHEd-7mJyBbxqKTw" target="_VqldUCVHEd-7mJyBbxqKTw"/>
+    </region>
+  </packagedElement>
+</uml:Package>
