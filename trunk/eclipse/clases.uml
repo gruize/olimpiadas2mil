@@ -139,13 +139,13 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_t2S-EBxtEd-bu4pqJ0Lz8w" name="Emplazamiento">
-    <ownedAttribute xmi:id="_2InZkBxtEd-bu4pqJ0Lz8w" name="tienePiscina" aggregation="composite">
+    <ownedAttribute xmi:id="_2InZkBxtEd-bu4pqJ0Lz8w" name="numeroPiscina" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
-    <ownedAttribute xmi:id="_ZHIIkCerEd-sKc2OzbLuUw" name="tienePistaAtletismo" aggregation="composite">
+    <ownedAttribute xmi:id="_ZHIIkCerEd-sKc2OzbLuUw" name="numeroPistaAtletismo" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
-    <ownedAttribute xmi:id="_a-pD0CerEd-sKc2OzbLuUw" name="tieneCircuito" aggregation="composite">
+    <ownedAttribute xmi:id="_a-pD0CerEd-sKc2OzbLuUw" name="numeroCircuito" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
   </packagedElement>
@@ -309,7 +309,7 @@
   <packagedElement xmi:type="uml:Association" xmi:id="_BSTqwB0yEd-HGKXrA_WGfg" memberEnd="_BSUR0B0yEd-HGKXrA_WGfg _BSWuEB0yEd-HGKXrA_WGfg">
     <ownedEnd xmi:id="_BSUR0B0yEd-HGKXrA_WGfg" name="miComprador" type="_8Tp_cB0xEd-HGKXrA_WGfg" association="_BSTqwB0yEd-HGKXrA_WGfg">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BSWHAB0yEd-HGKXrA_WGfg" value="1"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BSVf8B0yEd-HGKXrA_WGfg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BSVf8B0yEd-HGKXrA_WGfg"/>
     </ownedEnd>
     <ownedEnd xmi:id="_BSWuEB0yEd-HGKXrA_WGfg" name="misEntradas" type="_1w2PcByREd-I_sMS40L5rg" association="_BSTqwB0yEd-HGKXrA_WGfg">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EFCREB0yEd-HGKXrA_WGfg" value="*"/>
