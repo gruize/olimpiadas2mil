@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_ucpB4CL7Ed-Pp_xgrOY31w" name="entradas">
+  <elementImport xmi:id="_udPe0CL7Ed-Pp_xgrOY31w">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_udPe0SL7Ed-Pp_xgrOY31w">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_udPe0iL7Ed-Pp_xgrOY31w">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_udPe0yL7Ed-Pp_xgrOY31w">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_vyBgcCL7Ed-Pp_xgrOY31w" name="Comprador"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_5umeUCL7Ed-Pp_xgrOY31w" name="Comprar">
+    <include xmi:id="_Q5AS8CL9Ed-Pp_xgrOY31w" addition="_6cDaMCL7Ed-Pp_xgrOY31w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_6cDaMCL7Ed-Pp_xgrOY31w" name="Reservar">
+    <include xmi:id="_zNZlsCL8Ed-Pp_xgrOY31w" addition="_wujksCL8Ed-Pp_xgrOY31w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_7zXycCL7Ed-Pp_xgrOY31w" name="Anular Reserva"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uCvesCL8Ed-Pp_xgrOY31w" memberEnd="_uCvesSL8Ed-Pp_xgrOY31w _uCvetCL8Ed-Pp_xgrOY31w" navigableOwnedEnd="_uCvetCL8Ed-Pp_xgrOY31w">
+    <ownedEnd xmi:id="_uCvesSL8Ed-Pp_xgrOY31w" name="src" type="_vyBgcCL7Ed-Pp_xgrOY31w" association="_uCvesCL8Ed-Pp_xgrOY31w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uCvesyL8Ed-Pp_xgrOY31w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uCvesiL8Ed-Pp_xgrOY31w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_uCvetCL8Ed-Pp_xgrOY31w" name="dst" type="_5umeUCL7Ed-Pp_xgrOY31w" association="_uCvesCL8Ed-Pp_xgrOY31w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uCvetiL8Ed-Pp_xgrOY31w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uCvetSL8Ed-Pp_xgrOY31w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ub7awCL8Ed-Pp_xgrOY31w" memberEnd="_ub7awSL8Ed-Pp_xgrOY31w _ub7axCL8Ed-Pp_xgrOY31w" navigableOwnedEnd="_ub7axCL8Ed-Pp_xgrOY31w">
+    <ownedEnd xmi:id="_ub7awSL8Ed-Pp_xgrOY31w" name="src" type="_vyBgcCL7Ed-Pp_xgrOY31w" association="_ub7awCL8Ed-Pp_xgrOY31w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ub7awyL8Ed-Pp_xgrOY31w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ub7awiL8Ed-Pp_xgrOY31w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ub7axCL8Ed-Pp_xgrOY31w" name="dst" type="_6cDaMCL7Ed-Pp_xgrOY31w" association="_ub7awCL8Ed-Pp_xgrOY31w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ub7axiL8Ed-Pp_xgrOY31w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ub7axSL8Ed-Pp_xgrOY31w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_uzniACL8Ed-Pp_xgrOY31w" memberEnd="_uzniASL8Ed-Pp_xgrOY31w _uzniBCL8Ed-Pp_xgrOY31w" navigableOwnedEnd="_uzniBCL8Ed-Pp_xgrOY31w">
+    <ownedEnd xmi:id="_uzniASL8Ed-Pp_xgrOY31w" name="src" type="_vyBgcCL7Ed-Pp_xgrOY31w" association="_uzniACL8Ed-Pp_xgrOY31w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uzniAyL8Ed-Pp_xgrOY31w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uzniAiL8Ed-Pp_xgrOY31w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_uzniBCL8Ed-Pp_xgrOY31w" name="dst" type="_7zXycCL7Ed-Pp_xgrOY31w" association="_uzniACL8Ed-Pp_xgrOY31w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uzniBiL8Ed-Pp_xgrOY31w" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uzniBSL8Ed-Pp_xgrOY31w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_wujksCL8Ed-Pp_xgrOY31w" name="Seleccionar entrada"/>
+</uml:Package>
