@@ -30,12 +30,17 @@
     <ownedAttribute xmi:id="_wiSAABxpEd-bu4pqJ0Lz8w" name="maxEquipos" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
     </ownedAttribute>
-    <ownedAttribute xmi:id="_hK104B16Ed-sX-Px44GRFQ" name="tipoArbitro" type="_m2md0B16Ed-sX-Px44GRFQ" aggregation="composite"/>
     <ownedAttribute xmi:id="_STIFMCerEd-sKc2OzbLuUw" name="necesitaPistaAtletimo" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_U6d64CerEd-sKc2OzbLuUw" name="necesitaCircuito" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_tnpBYCh-Ed-MDeY6H4ZROg" name="nParticipantes" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_wqsisCh-Ed-MDeY6H4ZROg" name="nArbitros" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_2jcGoBxoEd-bu4pqJ0Lz8w" memberEnd="_2jctsBxoEd-bu4pqJ0Lz8w _2jd70RxoEd-bu4pqJ0Lz8w">
@@ -63,7 +68,9 @@
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
     </ownedAttribute>
     <ownedOperation xmi:id="_SG-pQBxrEd-bu4pqJ0Lz8w" name="asignarArbitros"/>
-    <ownedOperation xmi:id="_agyz4BxrEd-bu4pqJ0Lz8w" name="asignarEmplazamiento"/>
+    <ownedOperation xmi:id="_agyz4BxrEd-bu4pqJ0Lz8w" name="buscarEmplazamiento">
+      <ownedParameter xmi:id="_atXvwCh-Ed-MDeY6H4ZROg" type="_t2S-EBxtEd-bu4pqJ0Lz8w" direction="return"/>
+    </ownedOperation>
     <ownedOperation xmi:id="_FjXzIB05Ed-HGKXrA_WGfg" name="añadirEquipo">
       <ownedParameter xmi:id="_KPBC4B05Ed-HGKXrA_WGfg" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
@@ -84,6 +91,16 @@
       <ownedParameter xmi:id="_qlBTgB1-Ed-sX-Px44GRFQ" type="_P36RABxoEd-bu4pqJ0Lz8w" direction="return">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qlBTgR1-Ed-sX-Px44GRFQ" value="*"/>
       </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_bPC5cCh-Ed-MDeY6H4ZROg" name="seleccionarEmplazamiento">
+      <ownedParameter xmi:id="_fe_rsCh-Ed-MDeY6H4ZROg" direction="return"/>
+      <ownedParameter xmi:id="_fe_rsSh-Ed-MDeY6H4ZROg" name="e" type="_t2S-EBxtEd-bu4pqJ0Lz8w"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_hWNE8Ch-Ed-MDeY6H4ZROg" name="reservarEmplazamiento">
+      <ownedParameter xmi:id="_l4oHQCh-Ed-MDeY6H4ZROg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_l4oHQSh-Ed-MDeY6H4ZROg" name="e" type="_t2S-EBxtEd-bu4pqJ0Lz8w"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_3_f_gBxpEd-bu4pqJ0Lz8w" memberEnd="_3_gmkBxpEd-bu4pqJ0Lz8w _3_h0sBxpEd-bu4pqJ0Lz8w">
