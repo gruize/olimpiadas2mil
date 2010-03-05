@@ -11,7 +11,7 @@ context Equipo inv:
 Si una competición tiene un único árbitro la nacionalidad del arbitro debe ser distinta de la de alguno de los equipos participantes
 Context Evento inv:
       let nacionArbitro : Collection(String) = self.misArbitros>collect(nacionalidad) in
-      Self.miCompeticion.tipoArbitraje = tipoArbitraje.unico implies 
+      Self.miCompeticion.nArbitrosPorEvento = 1 implies 
 self.misEquipos->allInstances(e | e.misDeportistas->collect(nacionalidad)->intersection(nacionArbitro)->isEmpty)
 
 Si un a competición tiene varios árbitros, no pueden compartir nacionalidad entre ellos y por tanto a lo sumo solo hay un arbitro de la misma nacionalidad que algunos de los equipos
@@ -85,3 +85,10 @@ Context Asiento inv self.misReservas->forAll(r1,r2|r1 <> r2 and r1.instante <>r2
 No hay dos personas con el mismo id
 Person::allIntances()->isUnique(Id)
 // se repite para todas las clases con id
+
+// Hay tantos participantes y no mas de los que requiere la competición
+Context Evento inv:
+	self.misEquipos->size() = self.miCompeticion.nEquiposPorEvento
+	
+Context Evento inv:
+	self.misArbitros->size() = self.miCompeticion.nArbitrosPorEvento
