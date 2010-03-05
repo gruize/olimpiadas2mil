@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_OcuBYByUEd-I_sMS40L5rg">
+  <elementImport xmi:id="_Oe06MByUEd-I_sMS40L5rg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_Oe06MRyUEd-I_sMS40L5rg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_Oe06MhyUEd-I_sMS40L5rg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_Oe1hQByUEd-I_sMS40L5rg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_R69C0ByUEd-I_sMS40L5rg" name="Activity">
+    <node xmi:type="uml:InitialNode" xmi:id="_UwSRMByUEd-I_sMS40L5rg" outgoing="_VljEQByfEd-I_sMS40L5rg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_GshagByfEd-I_sMS40L5rg" name="Introduce los datos del evento" outgoing="_WjcP4ByfEd-I_sMS40L5rg" incoming="_VljEQByfEd-I_sMS40L5rg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_RmDI0ByfEd-I_sMS40L5rg" name="DecisionNode" outgoing="_b3MhIByiEd-I_sMS40L5rg _miMOwByjEd-I_sMS40L5rg" incoming="_WjcP4ByfEd-I_sMS40L5rg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ZQtAAByiEd-I_sMS40L5rg" name="Creo evento" outgoing="_3zgPMCItEd-47PtQ7kdwKg" incoming="_b3MhIByiEd-I_sMS40L5rg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_kYDH4ByiEd-I_sMS40L5rg" name="Introducir fecha, horario y duracion" outgoing="_2Kl-ECh3Ed-hNeAlDwSuNA" incoming="_3zgPMCItEd-47PtQ7kdwKg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_yfYO8ByiEd-I_sMS40L5rg" name="Buscar Emplazamiento" outgoing="_3yKY0Ch3Ed-hNeAlDwSuNA" incoming="_2Kl-ECh3Ed-hNeAlDwSuNA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Y3v4AByjEd-I_sMS40L5rg" name="Reservar emplazamiento" outgoing="_5wFQoCItEd-47PtQ7kdwKg" incoming="_7xkNoCh3Ed-hNeAlDwSuNA"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_lDn_AByjEd-I_sMS40L5rg" name="MergeNode" outgoing="_t60pMByjEd-I_sMS40L5rg" incoming="_miMOwByjEd-I_sMS40L5rg _5wFQoCItEd-47PtQ7kdwKg"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_sa9Y8ByjEd-I_sMS40L5rg" name="MergeNode" outgoing="_zu9LAByjEd-I_sMS40L5rg" incoming="_t60pMByjEd-I_sMS40L5rg _Qox0wCIwEd-47PtQ7kdwKg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_xjW2IByjEd-I_sMS40L5rg" name="DecisionNode" outgoing="_AsQbwCIyEd-47PtQ7kdwKg _Dq1swCIyEd-47PtQ7kdwKg" incoming="_zu9LAByjEd-I_sMS40L5rg"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_20194ByjEd-I_sMS40L5rg" incoming="_Dq1swCIyEd-47PtQ7kdwKg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ZfNEIBykEd-I_sMS40L5rg" name="Introducir arbitros" outgoing="_Op_XECh2Ed-hNeAlDwSuNA" incoming="_pdiH0CIwEd-47PtQ7kdwKg"/>
+    <node xmi:type="uml:JoinNode" xmi:id="_rnAXABykEd-I_sMS40L5rg" outgoing="_Qox0wCIwEd-47PtQ7kdwKg" incoming="_Op_XECh2Ed-hNeAlDwSuNA _dsTfsCh2Ed-hNeAlDwSuNA _aoXN4CIxEd-47PtQ7kdwKg _3Pto0CIxEd-47PtQ7kdwKg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_QaRqgBylEd-I_sMS40L5rg" name="Introducir equipo" outgoing="_dsTfsCh2Ed-hNeAlDwSuNA" incoming="_XVzQoCh2Ed-hNeAlDwSuNA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_EQRR4CIuEd-47PtQ7kdwKg" name="Introducir fecha, horario y duracion" outgoing="_aoXN4CIxEd-47PtQ7kdwKg" incoming="_YuBoICIxEd-47PtQ7kdwKg"/>
+    <node xmi:type="uml:JoinNode" xmi:id="__aD7cCIuEd-47PtQ7kdwKg" outgoing="_pdiH0CIwEd-47PtQ7kdwKg _YuBoICIxEd-47PtQ7kdwKg _xMuysCIxEd-47PtQ7kdwKg _XVzQoCh2Ed-hNeAlDwSuNA" incoming="_AsQbwCIyEd-47PtQ7kdwKg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_TDRWsCIvEd-47PtQ7kdwKg" name="Buscar Emplazamiento" outgoing="_Ee38ACh4Ed-hNeAlDwSuNA" incoming="_xMuysCIxEd-47PtQ7kdwKg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_T1L70CIvEd-47PtQ7kdwKg" name="Reservar emplazamiento" outgoing="_3Pto0CIxEd-47PtQ7kdwKg" incoming="_FeDhECh4Ed-hNeAlDwSuNA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_q7UpQCh3Ed-hNeAlDwSuNA" name="Seleccionar Emplazamiento" outgoing="_7xkNoCh3Ed-hNeAlDwSuNA" incoming="_3yKY0Ch3Ed-hNeAlDwSuNA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_AJHcsCh4Ed-hNeAlDwSuNA" name="Seleccionar Emplazamiento" outgoing="_FeDhECh4Ed-hNeAlDwSuNA" incoming="_Ee38ACh4Ed-hNeAlDwSuNA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_VljEQByfEd-I_sMS40L5rg" source="_UwSRMByUEd-I_sMS40L5rg" target="_GshagByfEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WjcP4ByfEd-I_sMS40L5rg" name="Existe el evento?" source="_GshagByfEd-I_sMS40L5rg" target="_RmDI0ByfEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_b3MhIByiEd-I_sMS40L5rg" name="No" source="_RmDI0ByfEd-I_sMS40L5rg" target="_ZQtAAByiEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_miMOwByjEd-I_sMS40L5rg" name="Si" source="_RmDI0ByfEd-I_sMS40L5rg" target="_lDn_AByjEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_t60pMByjEd-I_sMS40L5rg" source="_lDn_AByjEd-I_sMS40L5rg" target="_sa9Y8ByjEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_zu9LAByjEd-I_sMS40L5rg" name="introducir más datos?" source="_sa9Y8ByjEd-I_sMS40L5rg" target="_xjW2IByjEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3zgPMCItEd-47PtQ7kdwKg" source="_ZQtAAByiEd-I_sMS40L5rg" target="_kYDH4ByiEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5wFQoCItEd-47PtQ7kdwKg" source="_Y3v4AByjEd-I_sMS40L5rg" target="_lDn_AByjEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Qox0wCIwEd-47PtQ7kdwKg" source="_rnAXABykEd-I_sMS40L5rg" target="_sa9Y8ByjEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_pdiH0CIwEd-47PtQ7kdwKg" name="[¿Introduce arbitros?]" source="__aD7cCIuEd-47PtQ7kdwKg" target="_ZfNEIBykEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_YuBoICIxEd-47PtQ7kdwKg" name="[¿Cambiar datos del evento?]" source="__aD7cCIuEd-47PtQ7kdwKg" target="_EQRR4CIuEd-47PtQ7kdwKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_aoXN4CIxEd-47PtQ7kdwKg" source="_EQRR4CIuEd-47PtQ7kdwKg" target="_rnAXABykEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xMuysCIxEd-47PtQ7kdwKg" name="[¿Cambiar emplazamiento?]" source="__aD7cCIuEd-47PtQ7kdwKg" target="_TDRWsCIvEd-47PtQ7kdwKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3Pto0CIxEd-47PtQ7kdwKg" source="_T1L70CIvEd-47PtQ7kdwKg" target="_rnAXABykEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_AsQbwCIyEd-47PtQ7kdwKg" name="Si" source="_xjW2IByjEd-I_sMS40L5rg" target="__aD7cCIuEd-47PtQ7kdwKg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Dq1swCIyEd-47PtQ7kdwKg" name="No" source="_xjW2IByjEd-I_sMS40L5rg" target="_20194ByjEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Op_XECh2Ed-hNeAlDwSuNA" source="_ZfNEIBykEd-I_sMS40L5rg" target="_rnAXABykEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_XVzQoCh2Ed-hNeAlDwSuNA" name="[¿Introduce equipos?]" source="__aD7cCIuEd-47PtQ7kdwKg" target="_QaRqgBylEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_dsTfsCh2Ed-hNeAlDwSuNA" source="_QaRqgBylEd-I_sMS40L5rg" target="_rnAXABykEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_2Kl-ECh3Ed-hNeAlDwSuNA" source="_kYDH4ByiEd-I_sMS40L5rg" target="_yfYO8ByiEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3yKY0Ch3Ed-hNeAlDwSuNA" source="_yfYO8ByiEd-I_sMS40L5rg" target="_q7UpQCh3Ed-hNeAlDwSuNA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_7xkNoCh3Ed-hNeAlDwSuNA" source="_q7UpQCh3Ed-hNeAlDwSuNA" target="_Y3v4AByjEd-I_sMS40L5rg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Ee38ACh4Ed-hNeAlDwSuNA" source="_TDRWsCIvEd-47PtQ7kdwKg" target="_AJHcsCh4Ed-hNeAlDwSuNA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FeDhECh4Ed-hNeAlDwSuNA" source="_AJHcsCh4Ed-hNeAlDwSuNA" target="_T1L70CIvEd-47PtQ7kdwKg"/>
+  </packagedElement>
+</uml:Package>
