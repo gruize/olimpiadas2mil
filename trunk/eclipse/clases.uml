@@ -215,18 +215,18 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_CyPbECh4Ed-HiOm-wYmcrA" name="anular">
-      <ownedParameter xmi:id="_MGnUACh5Ed-HiOm-wYmcrA" direction="return">
+      <ownedParameter xmi:id="_R8OAACh6Ed-HiOm-wYmcrA" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedParameter>
-      <ownedParameter xmi:id="_MGnUASh5Ed-HiOm-wYmcrA" name="entrada" type="_1w2PcByREd-I_sMS40L5rg"/>
-      <ownedParameter xmi:id="_MGnUAih5Ed-HiOm-wYmcrA" name="idComprador">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+      <ownedParameter xmi:id="_R8OAASh6Ed-HiOm-wYmcrA" name="entrada" type="_1w2PcByREd-I_sMS40L5rg"/>
+      <ownedParameter xmi:id="_R8OAAih6Ed-HiOm-wYmcrA" name="idComprador">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_GU4bYCh4Ed-HiOm-wYmcrA" name="reservar">
-      <ownedParameter xmi:id="_97lYsCh4Ed-HiOm-wYmcrA" type="_1w2PcByREd-I_sMS40L5rg" direction="return"/>
-      <ownedParameter xmi:id="_97lYsSh4Ed-HiOm-wYmcrA" name="idComprador">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+      <ownedParameter xmi:id="_TRJyoCh6Ed-HiOm-wYmcrA" type="_1w2PcByREd-I_sMS40L5rg" direction="return"/>
+      <ownedParameter xmi:id="_TRJyoSh6Ed-HiOm-wYmcrA" name="idComprador">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_L0QOICh4Ed-HiOm-wYmcrA" name="vender">
