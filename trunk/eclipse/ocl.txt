@@ -39,10 +39,13 @@ Los árbitros de un evento tienen que pertenecer a la competición a la que perten
 Context Evento inv:
 	Self.misArbitros->forAll(e| e.misCompeticiones->incluyes(self.miCompeticion))
 
-
+	
+Context Evento::solaparHorarios(tiempo: UnlimitedNatural):Boolean
+	Body: result = self.horaIni < tiempo and self.horaFin > tiempo
+	
 Un mismo equipo no pueden estar en dos eventos que se solapen
 Context Evento::solaparHorarios(otro:Evento):Boolean
-	Post: result = self.horaIni < otro.horaIni and self.horaFin > otro.horaIni
+	Body: result = self.solaparHorarios(otro.horaIni)
 
 Context Equipo inv:
 	Self.misEventos->forAll(e1, e2 | e1.solaparHorarios(e2) = false)
@@ -70,16 +73,15 @@ Context evento inv:
 self.necesitaPiscina implies Evento.allInstances->select(e|self.solaparHorarios(e) and    e.miEmplazamiento = self.emplazamiento and e.necesitaPiscina)->size() <= self.miEmplazamiento.numeroPiscinas
 
 No hay entradas para un emplazamiento para un día que no hay eventos en ese emplazamiento
+Context Entrada inv:
+	self.asiento.miEmplazamiento.misEventos->exist(e| e.solaparHorarios(self.instante))
 Context emplazamiento inv:
 	self.misEntradas->select(entradasDelM)
 	si un emplazamiento para ese dia no hay evento implice que en ese emplazamiento no hay entradas para ese dia
 
-
-
-
-
 para todos los asientos, no tienes dos reservas en el mismo momento
 Context Asiento inv self.misReservas->forAll(r1,r2|r1 <> r2 and r1.instante <>r2.instante)
 
-
-
+No hay dos personas con el mismo id
+Person::allIntances()->isUnique(Id)
+// se repite para todas las clases con id
