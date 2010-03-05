@@ -198,40 +198,6 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:id="_aSakYByREd-I_sMS40L5rg" name="vender">
-      <ownedParameter xmi:id="_f3BEQB10Ed-AfY6DOto6rw" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedParameter>
-      <ownedParameter xmi:id="_f3BrUB10Ed-AfY6DOto6rw" name="c"/>
-    </ownedOperation>
-    <ownedOperation xmi:id="_bPzZsByREd-I_sMS40L5rg" name="reservar">
-      <ownedParameter xmi:id="_b1Zo8B10Ed-AfY6DOto6rw" type="_1w2PcByREd-I_sMS40L5rg" direction="return"/>
-      <ownedParameter xmi:id="_b1Zo8R10Ed-AfY6DOto6rw" name="c"/>
-      <ownedParameter xmi:id="_b1Zo8h10Ed-AfY6DOto6rw" name="instanteComienzo">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
-      </ownedParameter>
-      <ownedParameter xmi:id="_b1Zo8x10Ed-AfY6DOto6rw" name="instanteFinal">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:id="_x8l6sByREd-I_sMS40L5rg" name="anular" precondition="_JHxkcB0tEd-HGKXrA_WGfg" postcondition="_P5n34BzOEd-HGKXrA_WGfg">
-      <ownedRule xmi:id="_P5n34BzOEd-HGKXrA_WGfg" name="asientoLibre">
-        <specification xmi:type="uml:OpaqueExpression" xmi:id="_P5oe8BzOEd-HGKXrA_WGfg">
-          <language>OCL</language>
-          <body>asiento.estado = disponible</body>
-        </specification>
-      </ownedRule>
-      <ownedRule xmi:id="_JHxkcB0tEd-HGKXrA_WGfg" name="asientoReservado">
-        <specification xmi:type="uml:OpaqueExpression" xmi:id="_JH1O0B0tEd-HGKXrA_WGfg">
-          <language>OCL</language>
-          <body>asiento.estado == reservado</body>
-        </specification>
-      </ownedRule>
-      <ownedParameter xmi:id="_a58GQB10Ed-AfY6DOto6rw" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedParameter>
-      <ownedParameter xmi:id="_a58GQR10Ed-AfY6DOto6rw" name="comprador"/>
-    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_2yeEgByREd-I_sMS40L5rg" name="Asiento">
     <ownedAttribute xmi:id="_4JQRQByREd-I_sMS40L5rg" name="id" aggregation="composite">
@@ -247,6 +213,27 @@
       <ownedParameter xmi:id="_n6RSMB02Ed-HGKXrA_WGfg" name="paraCuando">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
       </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_CyPbECh4Ed-HiOm-wYmcrA" name="anular">
+      <ownedParameter xmi:id="_MGnUACh5Ed-HiOm-wYmcrA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_MGnUASh5Ed-HiOm-wYmcrA" name="entrada" type="_1w2PcByREd-I_sMS40L5rg"/>
+      <ownedParameter xmi:id="_MGnUAih5Ed-HiOm-wYmcrA" name="idComprador">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_GU4bYCh4Ed-HiOm-wYmcrA" name="reservar">
+      <ownedParameter xmi:id="_97lYsCh4Ed-HiOm-wYmcrA" type="_1w2PcByREd-I_sMS40L5rg" direction="return"/>
+      <ownedParameter xmi:id="_97lYsSh4Ed-HiOm-wYmcrA" name="idComprador">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_L0QOICh4Ed-HiOm-wYmcrA" name="vender">
+      <ownedParameter xmi:id="_OJQ9sCh4Ed-HiOm-wYmcrA" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_OJQ9sSh4Ed-HiOm-wYmcrA" name="entrada" type="_1w2PcByREd-I_sMS40L5rg"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_vbgBgBySEd-I_sMS40L5rg" name="tipos">
