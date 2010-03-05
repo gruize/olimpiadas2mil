@@ -508,7 +508,7 @@
     </children>
     <styles xmi:type="notation:CanonicalStyle" xmi:id="_cYzkIRzIEd-HGKXrA_WGfg"/>
     <element xmi:type="uml:DataType" href="clases.uml#_cYD9QBzIEd-HGKXrA_WGfg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cYzkIhzIEd-HGKXrA_WGfg" x="1206" y="638" width="417"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cYzkIhzIEd-HGKXrA_WGfg" x="1135" y="860" width="417"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_pIbUkBzMEd-HGKXrA_WGfg" type="2003" fontName="Sans">
     <children xmi:type="notation:DecorationNode" xmi:id="_pIcisBzMEd-HGKXrA_WGfg" type="5005">
