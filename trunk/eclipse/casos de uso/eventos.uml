@@ -14,17 +14,6 @@
   </elementImport>
   <packagedElement xmi:type="uml:Actor" xmi:id="_RTOaoBx3Ed-_7LrKzP6X3g" name="GestorEventos"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_S-88oBx3Ed-_7LrKzP6X3g" name="Ciudadano"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_a6kIUBx3Ed-_7LrKzP6X3g" name="solicitarPersonal"/>
-  <packagedElement xmi:type="uml:Association" xmi:id="_dciV0Bx3Ed-_7LrKzP6X3g" memberEnd="_dci84Bx3Ed-_7LrKzP6X3g _dckyEBx3Ed-_7LrKzP6X3g" navigableOwnedEnd="_dckyEBx3Ed-_7LrKzP6X3g">
-    <ownedEnd xmi:id="_dci84Bx3Ed-_7LrKzP6X3g" name="src" type="_RTOaoBx3Ed-_7LrKzP6X3g" association="_dciV0Bx3Ed-_7LrKzP6X3g">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dckLARx3Ed-_7LrKzP6X3g" value="1"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dckLABx3Ed-_7LrKzP6X3g" value="1"/>
-    </ownedEnd>
-    <ownedEnd xmi:id="_dckyEBx3Ed-_7LrKzP6X3g" name="dst" type="_a6kIUBx3Ed-_7LrKzP6X3g" association="_dciV0Bx3Ed-_7LrKzP6X3g">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dclZIRx3Ed-_7LrKzP6X3g" value="1"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dclZIBx3Ed-_7LrKzP6X3g" value="1"/>
-    </ownedEnd>
-  </packagedElement>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_fZd8kBx3Ed-_7LrKzP6X3g" name="crear evento">
     <include xmi:id="_w79g4CIzEd-47PtQ7kdwKg" addition="_owetMCIzEd-47PtQ7kdwKg"/>
     <include xmi:id="_bufoICI0Ed-47PtQ7kdwKg" addition="_8edTsCIzEd-47PtQ7kdwKg"/>
