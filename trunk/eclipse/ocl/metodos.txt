@@ -1,0 +1,112 @@
+
+context Asiento::reservar(idComprador : Integer, fecha : Integer) : Entrada
+pre:
+    self.misEntradas->select(e | a.fecha = fecha)->isEmpty()
+    precio >= 0
+post: 
+    result.oclIsNew()                                   and
+    result.asiento      = self                          and
+    result.fecha        = fecha                         and
+    result.precio       = damePrecio(fecha)             and
+    result.estado       = EstadoReserva::disponible     and
+    result.miComprador->notEmpty()                      and
+    self.misEntradas->includes(result)
+
+context Comprador::ajustarSaldo(incremento :: Integer) : Integer
+pre:
+    self.saldo + incremento >= 0
+post:
+    self.saldo = self.saldo@pre + incremento
+
+context Entrada::isCaducada() : Boolean
+body:
+    if self.estado = EstadoEntrada::reservada
+    then time() < momentoReserva + caducidadReserva
+    else false
+    endif
+
+context Entrada::reservar(c:Comprador) : Boolean
+post:
+    if self.estado@pre = EstadoReserva::disponible
+    then 
+        self.estado = EstadoReserva::reservada          and
+        self.miComprador = c                            and
+        result = true
+    else
+        result = false
+
+context Entrada::vender(c:Comprador) : Boolean
+post: 
+    if 
+        self.estado@pre = EstadoReserva::reservada      and
+        c = self.miComprador                            and
+        c.saldo@pre > self.precio
+    then
+        result          = true                          and
+        self.estado     = EstadoReserva::comprada       and
+        c^ajustarSaldo(-self.precio)
+    else
+        result          = false
+    endif
+
+Context Entrada::anular(c : Comprador) : Boolean
+post:
+    if
+        self.estado@pre = EstadoReserva::reservada      and
+        c = self.miComprador
+    then
+        result          = true                          and
+        self.estado     = EstadoReserva::disponible     and
+        self.miComprador->isEmpty()                     and
+    else
+        result          = false
+    endif
+
+Context Emplazamiento::quitarEvento(e : Evento) : Boolean
+post:
+    self.misEventos = self.misEventos@pre->excluding(e)
+
+Context Emplazamiento::puedoAsignarEvento(e : Evento) : Boolean
+post:
+    if 
+        self.misEventos->includes(e)
+    then 
+        result = true
+    else
+        result =
+            e.miCompeticion.requierePiscinas implies 
+                self.damePiscinasLibres(e) > 1                              and
+            e.miCompeticion.requierePiscinas implies 
+                self.damePistasAtletismoLibres(e) > 1                       and
+            e.miCompeticion.requierePiscinas implies 
+                self.dameCircuitosLibres(e) > 1
+    endif
+
+Context Emplazamiento::asignarEvento(e : Evento) : Boolean
+post:
+    if self.puedoAsignarEvento(e)
+    then
+        self.misEventos = self.misEventos@pre->including(e)
+        result = true
+    else
+        result = false
+    
+Context Evento::asignarEmplazamiento(e : Emplazamiento) : Boolean
+post:
+    if e = self.miEmplazamieto@pre then result = true
+    else
+        if e.puedoAsignarEvento(self)
+        then
+            (self.miEmplazamieto@pre->notEmpty() implies
+                self.miEmplazamiento@pre^quitarEvento(self))        and
+            self.miEmplazamiento = e                                and
+            e^asignarEmplazamiento(self)                            and
+            result = true
+        else
+            result = false
+        endif
+    endif
+    
+    
+        
+        
