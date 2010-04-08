@@ -90,5 +90,18 @@ Context Evento inv:
 Context Evento inv:
     self.misArbitros->size() = self.miCompeticion.nArbitrosPorEvento
 
+Context Evento inv:
+    self.miActa->notEmpty() implies self.isFinalizado()
+
 Context Comprador inv:
     self.saldo >= 0
+    
+Context Acta inv:
+    self.resultado->size() = self.miEvento.misEquipos->size()
+    
+Context Lesión inv:
+    self.miActa.miEvento.misEquipos.misDeportistas->includes(self.persona)  or
+    self.miActa.miEvento.misArbitros->includes(self.persona)
+
+Context Sanción inv:
+    self.miActa.miEvento.misEquipos.misDeportistas->includes(self.deportista)

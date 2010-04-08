@@ -106,7 +106,26 @@ post:
             result = false
         endif
     endif
+
+Context Acta::getResultado(e:Evento) : Integer
+pre:
+    self.miEvento.misEquipos->includes(e)
+post:
+    result = self.resultado->GET_DATO_EN_POSICION_I(self.miEvento.misEquipos->POSICION_DE_E(e))
     
-    
-        
-        
+Context Evento::getClasificacion() : OrderedSet(Equipo)
+pre:
+    self.finalizado()
+post:
+    result = self.miActa.resultado->ORDENAR(LA INTERFAZ DE GABI ES TOA LA KAKA)
+
+Context Competicion::getFinal() : Evento
+derive:
+    self.misEventos->select(e1 | self.misEventos->forAll(e2 | 
+        e1 <> e2 implies e1.horaInicio > e2.horaInicio))->any()
+
+Context Competicion::getMedallero() : OrderedSet(Equipo)
+pre:
+    self.misEventos->select(e | not e.finalizado())->isEmpty()
+post:
+    self.getFinal().getClasificacion() <-- ESTA MAL! si es una competicion de eventos de 2 equipos, no vale!!
