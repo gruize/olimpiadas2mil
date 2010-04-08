@@ -192,10 +192,10 @@
     </ownedAttribute>
     <ownedAttribute xmi:id="_IBFdEBzIEd-HGKXrA_WGfg" name="fech" aggregation="composite"/>
     <ownedAttribute xmi:id="_9isbIByREd-I_sMS40L5rg" name="precio" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
-    <ownedAttribute xmi:id="_hZsZMBzKEd-HGKXrA_WGfg" name="instante" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+    <ownedAttribute xmi:id="_hZsZMBzKEd-HGKXrA_WGfg" name="fecha" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_8tw8cBzMEd-HGKXrA_WGfg" name="property" aggregation="composite"/>
     <ownedAttribute xmi:id="_BObrQBzNEd-HGKXrA_WGfg" name="estado" type="_pHzpgBzMEd-HGKXrA_WGfg" aggregation="composite"/>
@@ -327,5 +327,28 @@
       <language>OCL</language>
       <body>equipos->size() = resultado->size()</body>
     </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8UBEAEJNEd-hb_d3DAxmxw" name="Comprador">
+    <ownedAttribute xmi:id="_-Z7noEJNEd-hb_d3DAxmxw" name="saldo" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_2nmeUEJOEd-hb_d3DAxmxw" name="ajustarSaldo">
+      <ownedParameter xmi:id="_5ed9wEJOEd-hb_d3DAxmxw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_5eek0EJOEd-hb_d3DAxmxw" name="incremento">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8ZOUIEJNEd-hb_d3DAxmxw" memberEnd="_8ZQwYEJNEd-hb_d3DAxmxw _8ZTMoEJNEd-hb_d3DAxmxw">
+    <ownedEnd xmi:id="_8ZQwYEJNEd-hb_d3DAxmxw" name="misEntradas" type="_1w2PcByREd-I_sMS40L5rg" association="_8ZOUIEJNEd-hb_d3DAxmxw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AFFFYEJPEd-hb_d3DAxmxw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AFFscEJPEd-hb_d3DAxmxw"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_8ZTMoEJNEd-hb_d3DAxmxw" name="miComprador" type="_8UBEAEJNEd-hb_d3DAxmxw" association="_8ZOUIEJNEd-hb_d3DAxmxw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_89qBcEJOEd-hb_d3DAxmxw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_89rPkEJOEd-hb_d3DAxmxw"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Package>
