@@ -12,17 +12,10 @@
   <elementImport xmi:id="_CN9CcBxoEd-bu4pqJ0Lz8w">
     <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
   </elementImport>
-  <packagedElement xmi:type="uml:Class" xmi:id="_P36RABxoEd-bu4pqJ0Lz8w" name="Equipo">
-    <ownedAttribute xmi:id="_HUawgBxpEd-bu4pqJ0Lz8w" name="id" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-    </ownedAttribute>
-  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_P36RABxoEd-bu4pqJ0Lz8w" name="Equipo"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_2iY9wBxoEd-bu4pqJ0Lz8w" name="Competicion">
     <ownedAttribute xmi:id="_nFJ-QBxpEd-bu4pqJ0Lz8w" name="necesitaPiscina" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-    </ownedAttribute>
-    <ownedAttribute xmi:id="_oY6sMBxpEd-bu4pqJ0Lz8w" name="id" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_s5xoQBxpEd-bu4pqJ0Lz8w" name="minEquipos" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
@@ -36,12 +29,18 @@
     <ownedAttribute xmi:id="_U6d64CerEd-sKc2OzbLuUw" name="necesitaCircuito" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
     </ownedAttribute>
-    <ownedAttribute xmi:id="_tnpBYCh-Ed-MDeY6H4ZROg" name="nParticipantes" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
-    </ownedAttribute>
     <ownedAttribute xmi:id="_wqsisCh-Ed-MDeY6H4ZROg" name="nArbitros" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
     </ownedAttribute>
+    <ownedAttribute xmi:id="_YEaXAEM5Ed-v9tvpce7Jvw" name="ganaElMayorResultado" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_mUkikEM8Ed-v9tvpce7Jvw" name="getMedallero">
+      <ownedParameter xmi:id="_pz03sEM8Ed-v9tvpce7Jvw" type="_P36RABxoEd-bu4pqJ0Lz8w" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_eQxR8ENBEd-v9tvpce7Jvw" name="geEventosOrdenados">
+      <ownedParameter xmi:id="_PRATUEitEd-ER9JBqy8Wiw" type="_P36RABxoEd-bu4pqJ0Lz8w" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_2jcGoBxoEd-bu4pqJ0Lz8w" memberEnd="_2jctsBxoEd-bu4pqJ0Lz8w _2jd70RxoEd-bu4pqJ0Lz8w">
     <ownedEnd xmi:id="_2jctsBxoEd-bu4pqJ0Lz8w" name="misEquipos" type="_P36RABxoEd-bu4pqJ0Lz8w" association="_2jcGoBxoEd-bu4pqJ0Lz8w">
@@ -54,14 +53,14 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_3-U60BxpEd-bu4pqJ0Lz8w" name="Evento">
-    <ownedAttribute xmi:id="_KPMqIBxqEd-bu4pqJ0Lz8w" name="id" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-    </ownedAttribute>
     <ownedAttribute xmi:id="_H_EXMCh2Ed-HiOm-wYmcrA" name="horaInicio" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_J9ucQCh2Ed-HiOm-wYmcrA" name="horaFin" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sl6A8ENAEd-v9tvpce7Jvw" name="finalizado" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
     </ownedAttribute>
     <ownedOperation xmi:id="_SG-pQBxrEd-bu4pqJ0Lz8w" name="asignarArbitros">
       <ownedParameter xmi:id="_8U5D0DgzEd--Oue3VgVgCw" direction="return">
@@ -100,6 +99,15 @@
       </ownedParameter>
       <ownedParameter xmi:id="__rLDITgzEd--Oue3VgVgCw" name="ar" type="_d5Z5ABxsEd-bu4pqJ0Lz8w"/>
     </ownedOperation>
+    <ownedOperation xmi:id="_3Qo7wEM0Ed-v9tvpce7Jvw" name="getClasificacion">
+      <ownedParameter xmi:id="_6BpDwEM0Ed-v9tvpce7Jvw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_a-zAUENAEd-v9tvpce7Jvw" name="finalizar">
+      <ownedParameter xmi:id="_d3g54ENAEd-v9tvpce7Jvw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_d3hg8ENAEd-v9tvpce7Jvw" name="a" type="_z__q4DgyEd--Oue3VgVgCw"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_3_f_gBxpEd-bu4pqJ0Lz8w" memberEnd="_3_gmkBxpEd-bu4pqJ0Lz8w _3_h0sBxpEd-bu4pqJ0Lz8w">
     <ownedEnd xmi:id="_3_gmkBxpEd-bu4pqJ0Lz8w" name="miCompeticion" type="_2iY9wBxoEd-bu4pqJ0Lz8w" association="_3_f_gBxpEd-bu4pqJ0Lz8w">
@@ -111,14 +119,14 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3_h0sRxpEd-bu4pqJ0Lz8w" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_OaEdMBxsEd-bu4pqJ0Lz8w" memberEnd="_OaFEQBxsEd-bu4pqJ0Lz8w _OaG5cBxsEd-bu4pqJ0Lz8w">
+  <packagedElement xmi:type="uml:Association" xmi:id="_OaEdMBxsEd-bu4pqJ0Lz8w" name="orderedSet" memberEnd="_OaFEQBxsEd-bu4pqJ0Lz8w _OaG5cBxsEd-bu4pqJ0Lz8w">
     <ownedEnd xmi:id="_OaFEQBxsEd-bu4pqJ0Lz8w" name="misEventos" type="_3-U60BxpEd-bu4pqJ0Lz8w" association="_OaEdMBxsEd-bu4pqJ0Lz8w">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OaGSYBxsEd-bu4pqJ0Lz8w" value="*"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OaFrUBxsEd-bu4pqJ0Lz8w" value="1"/>
     </ownedEnd>
     <ownedEnd xmi:id="_OaG5cBxsEd-bu4pqJ0Lz8w" name="misEquipos" type="_P36RABxoEd-bu4pqJ0Lz8w" association="_OaEdMBxsEd-bu4pqJ0Lz8w">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OaHggBxsEd-bu4pqJ0Lz8w" value="*"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OaG5cRxsEd-bu4pqJ0Lz8w" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UxqJoEM1Ed-v9tvpce7Jvw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UxrXwEM1Ed-v9tvpce7Jvw" value="2"/>
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_d5Z5ABxsEd-bu4pqJ0Lz8w" name="Arbitro">
@@ -135,9 +143,6 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_241LABxsEd-bu4pqJ0Lz8w" name="Persona">
-    <ownedAttribute xmi:id="_-QDQMBxsEd-bu4pqJ0Lz8w" name="id" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-    </ownedAttribute>
     <ownedAttribute xmi:id="_mJ4XEByQEd-I_sMS40L5rg" name="deportes" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_prUdgByQEd-I_sMS40L5rg" value="*"/>
@@ -215,9 +220,6 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_2yeEgByREd-I_sMS40L5rg" name="Asiento">
-    <ownedAttribute xmi:id="_4JQRQByREd-I_sMS40L5rg" name="id" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-    </ownedAttribute>
     <ownedAttribute xmi:id="_7CddkBySEd-I_sMS40L5rg" name="caracteristicas" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
@@ -252,8 +254,11 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_vbgBgBySEd-I_sMS40L5rg" name="tipos">
-    <packagedElement xmi:type="uml:Enumeration" xmi:id="_VoVhEBx0Ed-_7LrKzP6X3g" name="tipoRestriccion"/>
-    <packagedElement xmi:type="uml:Enumeration" xmi:id="_m2md0B16Ed-sX-Px44GRFQ" name="TipoArbitro"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_pHzpgBzMEd-HGKXrA_WGfg" name="EstadoReserva">
+      <ownedLiteral xmi:id="_rjGAMBzMEd-HGKXrA_WGfg" name="disponible"/>
+      <ownedLiteral xmi:id="_tMQWYBzMEd-HGKXrA_WGfg" name="reservada"/>
+      <ownedLiteral xmi:id="_2PeqYBzMEd-HGKXrA_WGfg" name="comprada"/>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_pio7QByTEd-I_sMS40L5rg" memberEnd="_pipiUByTEd-I_sMS40L5rg _pirXgByTEd-I_sMS40L5rg">
     <ownedEnd xmi:id="_pipiUByTEd-I_sMS40L5rg" name="asiento" type="_2yeEgByREd-I_sMS40L5rg" association="_pio7QByTEd-I_sMS40L5rg">
@@ -275,11 +280,6 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_of8foBzJEd-HGKXrA_WGfg" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Enumeration" xmi:id="_pHzpgBzMEd-HGKXrA_WGfg" name="EstadoReserva">
-    <ownedLiteral xmi:id="_rjGAMBzMEd-HGKXrA_WGfg" name="disponible"/>
-    <ownedLiteral xmi:id="_tMQWYBzMEd-HGKXrA_WGfg" name="reservada"/>
-    <ownedLiteral xmi:id="_2PeqYBzMEd-HGKXrA_WGfg" name="comprada"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_FJH6wB1zEd-AfY6DOto6rw" memberEnd="_FJLlIB1zEd-AfY6DOto6rw _FJNaUR1zEd-AfY6DOto6rw">
     <ownedEnd xmi:id="_FJLlIB1zEd-AfY6DOto6rw" name="misArbitros" type="_d5Z5ABxsEd-bu4pqJ0Lz8w" association="_FJH6wB1zEd-AfY6DOto6rw">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HbPHUB1zEd-AfY6DOto6rw" value="*"/>
@@ -290,7 +290,18 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FJOBYB1zEd-AfY6DOto6rw" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_z__q4DgyEd--Oue3VgVgCw" name="Acta"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_z__q4DgyEd--Oue3VgVgCw" name="Acta">
+    <ownedAttribute xmi:id="_-hb-8EMrEd-EupQ87e7IAQ" name="resultado" type="_fxh1cEikEd-ER9JBqy8Wiw" aggregation="composite">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rHu4sEikEd-ER9JBqy8Wiw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rHvfwEikEd-ER9JBqy8Wiw" value="2"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_I9JTYEMtEd-EupQ87e7IAQ" name="getResultado">
+      <ownedParameter xmi:id="_ML9YwEMtEd-EupQ87e7IAQ" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_ML-m4EMtEd-EupQ87e7IAQ" name="e" type="_P36RABxoEd-bu4pqJ0Lz8w"/>
+    </ownedOperation>
+  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_1VYJcDgyEd--Oue3VgVgCw" memberEnd="_1VYJcTgyEd--Oue3VgVgCw _1VYJdDgyEd--Oue3VgVgCw">
     <ownedEnd xmi:id="_1VYJcTgyEd--Oue3VgVgCw" name="miActa" type="_z__q4DgyEd--Oue3VgVgCw" association="_1VYJcDgyEd--Oue3VgVgCw">
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_thlWIEMsEd-EupQ87e7IAQ" value="1"/>
@@ -301,7 +312,11 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1VYJdTgyEd--Oue3VgVgCw" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_2yEJ4DgyEd--Oue3VgVgCw" name="Incidencia" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2yEJ4DgyEd--Oue3VgVgCw" name="Incidencia" isAbstract="true">
+    <ownedAttribute xmi:id="_yPmDwEM0Ed-v9tvpce7Jvw" name="descripcion" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_8UBEAEJNEd-hb_d3DAxmxw" name="Comprador">
     <ownedAttribute xmi:id="_-Z7noEJNEd-hb_d3DAxmxw" name="saldo" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -325,31 +340,13 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_89rPkEJOEd-hb_d3DAxmxw"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_nFL3QEMoEd-EupQ87e7IAQ" name="Lesiones">
+  <packagedElement xmi:type="uml:Class" xmi:id="_nFL3QEMoEd-EupQ87e7IAQ" name="Lesión">
     <generalization xmi:id="_ymTKAEMoEd-EupQ87e7IAQ" general="_2yEJ4DgyEd--Oue3VgVgCw"/>
     <ownedAttribute xmi:id="_jj0sgEMsEd-EupQ87e7IAQ" name="persona" type="_241LABxsEd-bu4pqJ0Lz8w" aggregation="composite"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_zNOnIEMoEd-EupQ87e7IAQ" name="Sanciones">
+  <packagedElement xmi:type="uml:Class" xmi:id="_zNOnIEMoEd-EupQ87e7IAQ" name="Sanción">
     <generalization xmi:id="_1A2g4EMoEd-EupQ87e7IAQ" general="_2yEJ4DgyEd--Oue3VgVgCw"/>
     <ownedAttribute xmi:id="_eShyAEMsEd-EupQ87e7IAQ" name="deportista" type="_DE2b8BxtEd-bu4pqJ0Lz8w" aggregation="composite"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_1tgykEMoEd-EupQ87e7IAQ" name="Resultado">
-    <generalization xmi:id="_4uq2cEMoEd-EupQ87e7IAQ" general="_2yEJ4DgyEd--Oue3VgVgCw"/>
-    <ownedAttribute xmi:id="_mtJqYEMrEd-EupQ87e7IAQ" name="equipo" type="_P36RABxoEd-bu4pqJ0Lz8w" aggregation="composite">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2nSy4EMrEd-EupQ87e7IAQ" value="*"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4BjxcEMrEd-EupQ87e7IAQ" value="2"/>
-    </ownedAttribute>
-    <ownedAttribute xmi:id="_-hb-8EMrEd-EupQ87e7IAQ" name="resultado" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EM0NYEMsEd-EupQ87e7IAQ" value="*"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FZy94EMsEd-EupQ87e7IAQ" value="2"/>
-    </ownedAttribute>
-    <ownedOperation xmi:id="_I9JTYEMtEd-EupQ87e7IAQ" name="getResultado">
-      <ownedParameter xmi:id="_ML9YwEMtEd-EupQ87e7IAQ" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-      <ownedParameter xmi:id="_ML-m4EMtEd-EupQ87e7IAQ" name="e" type="_P36RABxoEd-bu4pqJ0Lz8w"/>
-    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_91WcYEMoEd-EupQ87e7IAQ" memberEnd="_91XDcEMoEd-EupQ87e7IAQ _91ZfsUMoEd-EupQ87e7IAQ">
     <ownedEnd xmi:id="_91XDcEMoEd-EupQ87e7IAQ" name="miActa" type="_z__q4DgyEd--Oue3VgVgCw" association="_91WcYEMoEd-EupQ87e7IAQ">
@@ -357,8 +354,20 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_91Y4oEMoEd-EupQ87e7IAQ" value="1"/>
     </ownedEnd>
     <ownedEnd xmi:id="_91ZfsUMoEd-EupQ87e7IAQ" name="incidencias" type="_2yEJ4DgyEd--Oue3VgVgCw" association="_91WcYEMoEd-EupQ87e7IAQ">
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_q2Bu0EMsEd-EupQ87e7IAQ" value="*"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_q2C88EMsEd-EupQ87e7IAQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Z5liMEM0Ed-v9tvpce7Jvw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Z5mwUEM0Ed-v9tvpce7Jvw"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_KGPv0EM1Ed-v9tvpce7Jvw" constrainedElement="_3-U60BxpEd-bu4pqJ0Lz8w">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_KGQW4EM1Ed-v9tvpce7Jvw">
+      <language>OCL</language>
+      <body>Context Evento::getClasificacion() : OrderedSet(Equipo)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fxh1cEikEd-ER9JBqy8Wiw" name="EntradaResultado">
+    <ownedAttribute xmi:id="_iHZgoEikEd-ER9JBqy8Wiw" name="equipo" type="_P36RABxoEd-bu4pqJ0Lz8w" aggregation="composite"/>
+    <ownedAttribute xmi:id="_mdn6AEikEd-ER9JBqy8Wiw" name="resultado" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
   </packagedElement>
 </uml:Package>

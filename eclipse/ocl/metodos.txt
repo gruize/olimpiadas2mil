@@ -91,7 +91,7 @@ post:
     else
         result = false
     
-Context Evento::asignarEmplazamiento(e : Emplazamiento) : Boolean
+Context Evento::reservarEmplazamiento(e : Emplazamiento) : Boolean
 post:
     if e = self.miEmplazamieto@pre then result = true
     else
@@ -100,7 +100,7 @@ post:
             (self.miEmplazamieto@pre->notEmpty() implies
                 self.miEmplazamiento@pre^quitarEvento(self))        and
             self.miEmplazamiento = e                                and
-            e^asignarEmplazamiento(self)                            and
+            e^reservarEmplazamiento(self)                           and
             result = true
         else
             result = false
@@ -111,21 +111,41 @@ Context Acta::getResultado(e:Evento) : Integer
 pre:
     self.miEvento.misEquipos->includes(e)
 post:
-    result = self.resultado->GET_DATO_EN_POSICION_I(self.miEvento.misEquipos->POSICION_DE_E(e))
+    result = self.resultado->at(self.miEvento.misEquipos->indexOf(e))
     
 Context Evento::getClasificacion() : OrderedSet(Equipo)
 pre:
     self.finalizado()
 post:
-    result = self.miActa.resultado->ORDENAR(LA INTERFAZ DE GABI ES TOA LA KAKA)
+    if self.miCompeticion.ganaElMayorResultado
+    then
+        result = self.miActa.resultado->sortedBy(resultado).equipo
+    else
+        result = self.miActa.resultado->sortedBy(-resultado).equipo
+    endif
 
-Context Competicion::getFinal() : Evento
+
+Context Competicion::getEventosOrdenados() : OrderedSet(Evento)
 derive:
-    self.misEventos->select(e1 | self.misEventos->forAll(e2 | 
-        e1 <> e2 implies e1.horaInicio > e2.horaInicio))->any()
+    self.misEventos->asOrderedSet()->sortBy(horaInicio)
 
 Context Competicion::getMedallero() : OrderedSet(Equipo)
 pre:
     self.misEventos->select(e | not e.finalizado())->isEmpty()
 post:
-    self.getFinal().getClasificacion() <-- ESTA MAL! si es una competicion de eventos de 2 equipos, no vale!!
+    let eventosOrdenados : OrderedSet(Evento) = self.getEventosOrdenados() in
+    if eventosOrdenados->last().getClasificacion()->size() >= 3 or misEquipos->size() < 3
+    then
+        eventosOrdenados->last().getClasificacion()
+    else
+        if self.ganaElMayorResultado
+        then
+            eventosOrdenados->last().getClasificacion().prepend(
+                eventosOrdenados->at(eventosOrdenados->size()-1).getClasificacion()
+                ->last())
+        else
+            eventosOrdenados->last().getClasificacion().append(
+                eventosOrdenados->at(eventosOrdenados->size()-1).getClasificacion()
+                ->first())
+        endif
+    endif
