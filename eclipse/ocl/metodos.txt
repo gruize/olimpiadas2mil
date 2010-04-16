@@ -138,14 +138,7 @@ post:
     then
         eventosOrdenados->last().getClasificacion()
     else
-        if self.ganaElMayorResultado
-        then
-            eventosOrdenados->last().getClasificacion().prepend(
-                eventosOrdenados->at(eventosOrdenados->size()-1).getClasificacion()
-                ->last())
-        else
-            eventosOrdenados->last().getClasificacion().append(
-                eventosOrdenados->at(eventosOrdenados->size()-1).getClasificacion()
-                ->first())
-        endif
+        eventosOrdenados->last().getClasificacion().prepend(
+            eventosOrdenados->at(eventosOrdenados->size()-2).getClasificacion()
+            ->first())
     endif
