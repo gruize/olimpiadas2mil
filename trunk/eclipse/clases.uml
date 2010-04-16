@@ -17,11 +17,11 @@
     <ownedAttribute xmi:id="_nFJ-QBxpEd-bu4pqJ0Lz8w" name="necesitaPiscina" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
     </ownedAttribute>
-    <ownedAttribute xmi:id="_s5xoQBxpEd-bu4pqJ0Lz8w" name="minEquipos" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+    <ownedAttribute xmi:id="_s5xoQBxpEd-bu4pqJ0Lz8w" name="minJugadoresPorEquipo" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
-    <ownedAttribute xmi:id="_wiSAABxpEd-bu4pqJ0Lz8w" name="maxEquipos" aggregation="composite">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+    <ownedAttribute xmi:id="_wiSAABxpEd-bu4pqJ0Lz8w" name="minJugadoresPorEquipo" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
     <ownedAttribute xmi:id="_STIFMCerEd-sKc2OzbLuUw" name="necesitaPistaAtletimo" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
@@ -34,6 +34,12 @@
     </ownedAttribute>
     <ownedAttribute xmi:id="_YEaXAEM5Ed-v9tvpce7Jvw" name="ganaElMayorResultado" aggregation="composite">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_JW6DsEi-Ed-606DkRcvk4g" name="nEquiposPorEvento" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_LaqrMEi-Ed-606DkRcvk4g" name="nArbitrosPorEvento" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
     <ownedOperation xmi:id="_mUkikEM8Ed-v9tvpce7Jvw" name="getMedallero">
       <ownedParameter xmi:id="_pz03sEM8Ed-v9tvpce7Jvw" type="_P36RABxoEd-bu4pqJ0Lz8w" direction="return"/>
