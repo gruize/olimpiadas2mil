@@ -1,0 +1,1 @@
+La creacción del acta lleva implicito introducir todos los datos del acta, lesiones, sanciones y resultados; que una vez introducidos no se pueden modificar.
