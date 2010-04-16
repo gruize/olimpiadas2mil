@@ -52,20 +52,29 @@ Dado un emplazamiento no hay mas eventos asignados que necesiten recurso que rec
             self.solapaCon(e)                                               and    
             e.necesitaPiscina
         )->size() <= self.miEmplazamiento.numeroPiscinas
+        
+    Context evento inv:
+        self.necesitaPistaAtletismo implies self.miEmplazamiento.misEventos->select(e|
+            self.solapaCon(e)                                               and    
+            e.necesitaPistaAtletismo
+        )->size() <= self.miEmplazamiento.numeroPistaAtletismo
+    
+    Context evento inv:
+        self.necesitaCircuito implies self.miEmplazamiento.misEventos->select(e|
+            self.solapaCon(e)                                               and    
+            e.necesitaCircuito
+        )->size() <= self.miEmplazamiento.numeroCircuito
 
-No hay entradas para un emplazamiento para un día que no hay eventos en ese emplazamiento
 Context Entrada
     inv entradaTieneEvento: 
         self.asiento.miEmplazamiento.misEventos->exist(e| e.solapaCon(self.instante))
     inv entradaDisponibleSiYSoloSiNoTieneComprador
         self.estado = EstadoReserva::disponible implies self.miComprador->isEmpty()     and
         self.miComprador->isEmpty() implies self.estado = EstadoReserva::disponible
-        
-Un asiento reservado tiene comprador
-    
+
 Ningun asiento tiene dos reservas en el mismo momento
-    Context Asiento inv: 
-        self.misReservas->forAll(r1,r2|r1 <> r2 and r1.instante <>r2.instante)
+Context Asiento inv: 
+    self.misReservas->forAll(r1,r2|r1 <> r2 and r1.instante <>r2.instante)
 
 // Hay tantos participantes y no mas de los que requiere la competición
 Context Evento inv:
@@ -89,3 +98,16 @@ Context Lesión inv:
 
 Context Sanción inv:
     self.miActa.miEvento.misEquipos.misDeportistas->includes(self.deportista)
+
+Las competiciones de dos equipos por evento tienen una final y una de consolacion
+(respectivamente el ultimo y penultimo evento de esa competicion). En estos dos
+eventos los equipos participantes han de ser distintos
+Context Competicion inv
+    let 
+        final       : Evento = self.getEventosOrdenados()->last(),
+        consolacion : Evento = self.getEventosOrdenados()->at(self.getEventosOrdenados()->size()-2)
+    in
+    Competicion.nEquiposPorEvento = 2 implies 
+        final.misEquipos->intersection(consolacion->misEquipos)->isEmpty()
+        
+
