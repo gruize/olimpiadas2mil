@@ -1,0 +1,21 @@
+format 70
+
+classinstance 128007 class_ref 128333 // Gestor_event
+  name ""   xyz 65 4 2000 life_line_z 2000
+classinstance 128135 class_ref 129357 // Evento
+  name ""   xyz 242 4 2000 life_line_z 2000
+note 128647 "Los equipos y por lo tanto el viaje se pueden asignar a posteriori."
+  color white  xyzwh 301 110 2000 185 59
+durationcanvas 128263 classinstance_ref 128007 // :Gestor_event
+  xyzwh 96 103 2010 11 40
+end
+durationcanvas 128391 classinstance_ref 128135 // :Evento
+  xyzwh 261 103 2010 11 25
+end
+msg 128519 synchronous
+  from durationcanvas_ref 128263
+  to durationcanvas_ref 128391
+  yz 103 2015 explicitmsg "crearEvento(trabajadores,arbitros,anuncios,emplazamiento)"
+  show_full_operations_definition default drawing_language default
+  label_xy 113 84
+end
