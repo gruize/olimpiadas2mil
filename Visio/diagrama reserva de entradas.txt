@@ -1,0 +1,3 @@
+Para realizar una reserva lo primero que se hace es comprobar el estado de las entradas disponibles, haciendose un listado con todas las entradas disponibles y seleccionables, en el caso de existir entradas de varios tipos, si la entrada no se ajusta al perfil de comprador (ya sea porque no esta disponible para el o por que ese tipo de entrada es especifico para determinado tipo de personas) no aparecerán en el listado. una vez realizada la petición de reserva, esta es realizada.
+
+Problema, imprimir.

@@ -1,1 +1,1 @@
-La creacción del acta lleva implicito introducir todos los datos del acta, lesiones, sanciones y resultados; que una vez introducidos no se pueden modificar.
+Este diagrama de secuecnia muestra como se crea un acta. Las actas una vez creadas no pueden ser modificadas y quedan almacenadas en el sistema. Al introducir el acta hay que especificar los atributos del acta. Al almacenar el acta, se actualizan, en caso de existir, los sigueintes eventos de la compteción

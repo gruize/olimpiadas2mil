@@ -1,0 +1,1 @@
+Este diagrama de secuencia representa como se genera un horario personalizado dependiendo de las entradas. El usuario solicita los horarios que le seran representados en la interfaz web, esto se realiza con el objeto comprador que sera el que consultando todas las entradas y sus respectivos asientos y emplazamientos, dara una lista detallada de todo el horario.

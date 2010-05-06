@@ -1,0 +1,1 @@
+Este diagrama como un usuario puede consultar el estado de una competición. Esto incluye resultados de partidos anteriores, proximos eventos, actas de los equipos etc. 
