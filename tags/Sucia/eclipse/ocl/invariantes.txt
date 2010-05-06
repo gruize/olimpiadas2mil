@@ -1,0 +1,113 @@
+El numero de jugadores de un equipo estará comprendido entre un nº minimo y un nº máximo
+    context Equipo inv:
+        self.misDeportistas->size() >= self.miCompeticion.minJugadoresPorEquipo and
+        self.misDeportistas->size() <= self.miCompeticion.maxJugadoresPorEquipo
+
+Si una competición tiene un único árbitro la nacionalidad del arbitro debe ser distinta de la de alguno de los equipos participantes
+    Context Evento inv:
+        let nacionArbitro : Collection(String) = self.misArbitros.nacionalidad in
+        Self.miCompeticion.nArbitrosPorEvento = 1 implies 
+        self.misEquipos->allInstances(e | e.misDeportistas.nacionalidad->intersection(nacionArbitro)->isEmpty())
+
+Si una competición tiene varios árbitros, no pueden compartir nacionalidad entre ellos y por tanto a lo sumo solo hay un arbitro de la misma nacionalidad que algunos de los equipos
+    Context Evento inv:
+        Self.miCompeticion.tipoArbitraje = self.nArbitros > 1 implies 
+        self.misArbitros->forAll(a1,a2 | a1.nacionalidad <> a2.nacionalidad)
+    
+Todos los miembros de un equipo tienen que ser de la misma nacionalidad
+    Context Equipo inv:
+        Self.misDeportistas->forAll(d1,d2 | d1.nacionalidad = d2.nacionalidad)
+
+Los equipos de un evento tienen que estar inscritos en la competición a la que pertenece el evento
+    Context Evento inv:
+        Self.misEquipos->forAll(e| e.miCompeticion = self.miCompeticion)
+
+Los árbitros de un evento tienen que pertenecer a la competición a la que pertenece el evento
+    Context Evento inv:
+        Self.misArbitros->forAll(a| a.misCompeticiones->includes(self.miCompeticion))
+
+Un mismo equipo no pueden estar en dos eventos que se solapen
+    Context Equipo inv:
+        Self.misEventos->forAll(e1, e2 | e1.solapaCon(e2) = false)
+
+Un mismo árbitro no pueden estar en dos eventos que se solapen
+    Context Arbitros inv:
+        Self.misEventos->forAll(e1, e2 | e1.solapaCon(e2) = false)
+
+Un jugador no puede estar en dos equipos que se solapen
+    Context Deportista inv:
+        Self.misEquipos->forAll(eq1,eq2|eq1.misEventos->forAll(ev1 | eq2.misEventos->forAll(ev2 | ev1.solapaCon(ev2) = false)))
+
+Para todo evento su emplazamiento cumple las restricciones de la competicion
+    Context Evento inv:
+        Self.miCompeticion.necesitaPiscina implies self.miEmplazamiento.numeroPiscina > 0
+    Context Evento inv:
+       Self.miCompeticion.necesitaPistaAtletismo implies self.miEmplazamiento.numeroPistaAtletismo > 0
+    Context Evento inv:
+        Self.miCompeticion.necesitaCircuito implies self.miEmplazamiento.numeroCircuito > 0
+
+Dado un emplazamiento no hay mas eventos asignados que necesiten recurso que recursos tiene el emplazamiento
+    Context evento inv:
+        self.necesitaPiscina implies self.miEmplazamiento.misEventos->select(e|
+            self.solapaCon(e)                                               and    
+            e.necesitaPiscina
+        )->size() <= self.miEmplazamiento.numeroPiscinas
+        
+    Context evento inv:
+        self.necesitaPistaAtletismo implies self.miEmplazamiento.misEventos->select(e|
+            self.solapaCon(e)                                               and    
+            e.necesitaPistaAtletismo
+        )->size() <= self.miEmplazamiento.numeroPistaAtletismo
+    
+    Context evento inv:
+        self.necesitaCircuito implies self.miEmplazamiento.misEventos->select(e|
+            self.solapaCon(e)                                               and    
+            e.necesitaCircuito
+        )->size() <= self.miEmplazamiento.numeroCircuito
+
+Context Entrada
+    inv entradaTieneEvento: 
+        self.asiento.miEmplazamiento.misEventos->exist(e| e.solapaCon(self.instante))
+    inv entradaDisponibleSiYSoloSiNoTieneComprador
+        self.estado = EstadoReserva::disponible implies self.miComprador->isEmpty()     and
+        self.miComprador->isEmpty() implies self.estado = EstadoReserva::disponible
+
+Ningun asiento tiene dos reservas en el mismo momento
+Context Asiento inv: 
+    self.misReservas->forAll(r1,r2|r1 <> r2 and r1.instante <>r2.instante)
+
+// Hay tantos participantes y no mas de los que requiere la competición
+Context Evento inv:
+    self.misEquipos->size() = self.miCompeticion.nEquiposPorEvento
+    
+Context Evento inv:
+    self.misArbitros->size() = self.miCompeticion.nArbitrosPorEvento
+
+Context Evento inv:
+    self.miActa->notEmpty() implies self.isFinalizado()
+
+Context Comprador inv:
+    self.saldo >= 0
+    
+Context Acta inv:
+    self.resultado.equipos = self.miEvento.misEquipos
+    
+Context Lesión inv:
+    self.miActa.miEvento.misEquipos.misDeportistas->includes(self.persona)  or
+    self.miActa.miEvento.misArbitros->includes(self.persona)
+
+Context Sanción inv:
+    self.miActa.miEvento.misEquipos.misDeportistas->includes(self.deportista)
+
+Las competiciones de dos equipos por evento tienen una final y una de consolacion
+(respectivamente el ultimo y penultimo evento de esa competicion). En estos dos
+eventos los equipos participantes han de ser distintos
+Context Competicion inv
+    let 
+        final       : Evento = self.getEventosOrdenados()->last(),
+        consolacion : Evento = self.getEventosOrdenados()->at(self.getEventosOrdenados()->size()-2)
+    in
+    Competicion.nEquiposPorEvento = 2 implies 
+        final.misEquipos->intersection(consolacion->misEquipos)->isEmpty()
+        
+

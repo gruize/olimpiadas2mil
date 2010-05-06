@@ -1,0 +1,50 @@
+Context Evento::solaparHorarios(tiempo: Integer):Boolean
+derive: self.horaIni < tiempo and self.horaFin > tiempo
+
+Context Evento::solapaCon(otro:Evento):Boolean
+derive: result = self.solaparHorarios(otro.horaIni)
+
+Context Emplazamiento::dameMaximosSolapantes(eventos : Collection(Evento)) : Integer
+derive:
+    result = eventos->asSet()->iterate(
+        e1  : Evento        ;
+        max : Integer = 0   |
+            let
+                newMax : Integer = eventos->select(e2 | e1.solapaCon(e2))
+            in
+                if(newMax > max)
+                    max = newMax
+                else
+                    max = max
+                endif
+    )
+
+Context Emplazamiento::damePiscinasLibres(e1 : Evento) :: Integer
+derive: 
+    let eventos : Collection(Eventos) =
+        self.misEventos->select(e2 | 
+            e2.solapaCon(e1)                                and
+            e2.miCompeticion.requierePiscina
+        )
+    in
+        result = numPiscinas - dameMaximosSolapantes(eventos)
+    
+Context Emplazamiento::damePistasAtletismoLibres(e1 : Evento) :: Integer
+derive: 
+    let eventos : Collection(Eventos) =
+        self.misEventos->select(e2 | 
+            e2.solapaCon(e1)                                and
+            e2.miCompeticion.requierePistaAtletismo
+        )
+    in
+        result = numPistasAtletismo - dameMaximosSolapantes(eventos)
+        
+Context Emplazamiento::dameCircuitosLibres(e1 : Evento) :: Integer
+derive: 
+    let eventos : Collection(Eventos) =
+        self.misEventos->select(e2 | 
+            e2.solapaCon(e1)                                and
+            e2.miCompeticion.requiereCircuito
+        )
+    in
+        result = numCircuitos - dameMaximosSolapantes(eventos)
