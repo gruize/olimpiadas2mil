@@ -1,0 +1,8 @@
+Los tres estados entre los que puede transitar una entrada son: 
+Libre: El cual representa el estado inicial y al que se transita despues de que una entrada haya caducado desde el estado de "Reservada". Desde este estado se puede transitar a "Reservada" en caso de producirse una reserva.
+
+Reservada: representa cuando una entrada ha sido reservada pero aún no a sido pagada. Se transita a este estado desde el estado de "Libre" al realizar la reserva y de él se puede transitar a "Libre" en caso de que la reserva caduque o "Comprada" en caso de que realice la compra
+
+Comprada: Este estado representa cuando una entrada ha sido comprada y se transita a este estado desde el estado "Reservada". Esta estado no tiene transiciones posilbles
+
+En caso de celebrarse el evento la entrada pasa a ser eliminada.
