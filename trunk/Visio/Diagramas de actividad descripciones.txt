@@ -1,0 +1,6 @@
+Entradas:
+
+Cuando vas a gestionar la entrada puedes si no tienes entradas, puedes volver comprar entradas ya reservadas o reservar entradas nueva. Una entrada reservada no puede modificarse, puede anularse y reservar una entrada nueva.
+
+Evento:
+Cuando creas un evento es obligatorio introducir una serie de datos, estos son la fecha, emplazamiento y reserva de dicho emplazamiento. Una vez introducido estos datos, en cualquier momento pueden modificarse los equipos, arbitos, emplazamientos y otros datos del evento. estas modificaciones pueden hacerse de manera individual cada vez que se quiera modificar un evento. No existe la posibilidad de dejar un evento sin emplazamiento, fecha, hora y duración 
