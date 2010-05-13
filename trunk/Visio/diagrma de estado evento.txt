@@ -1,0 +1,10 @@
+Representa todos los estados donde puede estar un evento
+
+Los estados son
+Evento creado: Representa el estado inicial y representa el hecho de que este creado, pero aún están todos los datos. Este estado transita a "Evento planificado" en el momento en que todo los datos necesarios para la ejecución del evento. 
+
+Evento Planificado: representa el momento en que el estado tiene todos los datos necesarios para que el evento comience, los datos de este estado pueden modificarse pero no pueden eliminarse, por lo tanto siempre estara disponible para comenzar, transta a este estado cuando comienza el evento
+
+Evento Comenzado: Representa el estado en que el evento ha comenzado y no ha sido introducido el acta, cuando esto ocurre, se ha introducido el acta, el estado transita a finalizado.
+
+Evento Finalizado: Representa el momento en que el acta ya ha sido introducida en el sistema. En este momento no cambia nada del evento y este estado no transita a ningun estado; es decir, es un estado final.
