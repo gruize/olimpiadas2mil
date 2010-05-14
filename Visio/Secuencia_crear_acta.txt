@@ -1,0 +1,1 @@
+Este diagrama de secuecnia muestra como se crea un acta. Las actas una vez creadas no pueden ser modificadas y quedan almacenadas en el sistema. Al introducir el acta hay que especificar todos los datos relevantes del acta, estos son lesionados, sancionados y resultados.
